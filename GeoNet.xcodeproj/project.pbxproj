@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B912DE151DDEC461004B5A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B912DE141DDEC461004B5A71 /* Assets.xcassets */; };
+		B912DE181DDEC461004B5A71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B912DE161DDEC461004B5A71 /* LaunchScreen.storyboard */; };
+		B912DE231DDEC461004B5A71 /* GeoNetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE221DDEC461004B5A71 /* GeoNetTests.swift */; };
+		B912DE2F1DDEC49A004B5A71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE2E1DDEC49A004B5A71 /* AppDelegate.swift */; };
+		B912DE381DDEC625004B5A71 /* QuakesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE371DDEC625004B5A71 /* QuakesViewController.swift */; };
+		B912DE3E1DDEC7B6004B5A71 /* ReportShakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE3D1DDEC7B6004B5A71 /* ReportShakingViewController.swift */; };
+		B912DE401DDEC7C7004B5A71 /* GeoNetViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE3F1DDEC7C7004B5A71 /* GeoNetViewControllers.swift */; };
+		B912DE421DDEC81E004B5A71 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE411DDEC81E004B5A71 /* NewsViewController.swift */; };
+		B912DE441DDEC832004B5A71 /* ShakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE431DDEC832004B5A71 /* ShakingViewController.swift */; };
+		B912DE461DDEC84A004B5A71 /* VolcanoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE451DDEC84A004B5A71 /* VolcanoesViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B912DE1F1DDEC461004B5A71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B912DE001DDEC461004B5A71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B912DE071DDEC461004B5A71;
+			remoteInfo = GeoNet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B912DE081DDEC461004B5A71 /* GeoNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B912DE141DDEC461004B5A71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B912DE171DDEC461004B5A71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B912DE1E1DDEC461004B5A71 /* GeoNetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B912DE221DDEC461004B5A71 /* GeoNetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoNetTests.swift; sourceTree = "<group>"; };
+		B912DE241DDEC461004B5A71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B912DE2E1DDEC49A004B5A71 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B912DE301DDEC4EC004B5A71 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B912DE371DDEC625004B5A71 /* QuakesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakesViewController.swift; sourceTree = "<group>"; };
+		B912DE3D1DDEC7B6004B5A71 /* ReportShakingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportShakingViewController.swift; sourceTree = "<group>"; };
+		B912DE3F1DDEC7C7004B5A71 /* GeoNetViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoNetViewControllers.swift; sourceTree = "<group>"; };
+		B912DE411DDEC81E004B5A71 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		B912DE431DDEC832004B5A71 /* ShakingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakingViewController.swift; sourceTree = "<group>"; };
+		B912DE451DDEC84A004B5A71 /* VolcanoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolcanoesViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B912DE051DDEC461004B5A71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B912DE1B1DDEC461004B5A71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B912DDFF1DDEC461004B5A71 = {
+			isa = PBXGroup;
+			children = (
+				B912DE0A1DDEC461004B5A71 /* GeoNet */,
+				B912DE211DDEC461004B5A71 /* GeoNetTests */,
+				B912DE091DDEC461004B5A71 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B912DE091DDEC461004B5A71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B912DE081DDEC461004B5A71 /* GeoNet.app */,
+				B912DE1E1DDEC461004B5A71 /* GeoNetTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B912DE0A1DDEC461004B5A71 /* GeoNet */ = {
+			isa = PBXGroup;
+			children = (
+				B912DE141DDEC461004B5A71 /* Assets.xcassets */,
+				B912DE2D1DDEC49A004B5A71 /* App */,
+				B912DE321DDEC60A004B5A71 /* Felt */,
+				B912DE331DDEC60A004B5A71 /* News */,
+				B912DE341DDEC60A004B5A71 /* Quakes */,
+				B912DE351DDEC60A004B5A71 /* Shaking */,
+				B912DE361DDEC60A004B5A71 /* Volcanoes */,
+			);
+			path = GeoNet;
+			sourceTree = "<group>";
+		};
+		B912DE211DDEC461004B5A71 /* GeoNetTests */ = {
+			isa = PBXGroup;
+			children = (
+				B912DE221DDEC461004B5A71 /* GeoNetTests.swift */,
+				B912DE241DDEC461004B5A71 /* Info.plist */,
+			);
+			path = GeoNetTests;
+			sourceTree = "<group>";
+		};
+		B912DE2D1DDEC49A004B5A71 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B912DE2E1DDEC49A004B5A71 /* AppDelegate.swift */,
+				B912DE3F1DDEC7C7004B5A71 /* GeoNetViewControllers.swift */,
+				B912DE301DDEC4EC004B5A71 /* Info.plist */,
+				B912DE161DDEC461004B5A71 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B912DE321DDEC60A004B5A71 /* Felt */ = {
+			isa = PBXGroup;
+			children = (
+				B912DE3D1DDEC7B6004B5A71 /* ReportShakingViewController.swift */,
+			);
+			path = Felt;
+			sourceTree = "<group>";
+		};
+		B912DE331DDEC60A004B5A71 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				B912DE411DDEC81E004B5A71 /* NewsViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		B912DE341DDEC60A004B5A71 /* Quakes */ = {
+			isa = PBXGroup;
+			children = (
+				B912DE371DDEC625004B5A71 /* QuakesViewController.swift */,
+			);
+			path = Quakes;
+			sourceTree = "<group>";
+		};
+		B912DE351DDEC60A004B5A71 /* Shaking */ = {
+			isa = PBXGroup;
+			children = (
+				B912DE431DDEC832004B5A71 /* ShakingViewController.swift */,
+			);
+			path = Shaking;
+			sourceTree = "<group>";
+		};
+		B912DE361DDEC60A004B5A71 /* Volcanoes */ = {
+			isa = PBXGroup;
+			children = (
+				B912DE451DDEC84A004B5A71 /* VolcanoesViewController.swift */,
+			);
+			path = Volcanoes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B912DE071DDEC461004B5A71 /* GeoNet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B912DE271DDEC461004B5A71 /* Build configuration list for PBXNativeTarget "GeoNet" */;
+			buildPhases = (
+				B912DE041DDEC461004B5A71 /* Sources */,
+				B912DE051DDEC461004B5A71 /* Frameworks */,
+				B912DE061DDEC461004B5A71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoNet;
+			productName = GeoNet;
+			productReference = B912DE081DDEC461004B5A71 /* GeoNet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B912DE1D1DDEC461004B5A71 /* GeoNetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B912DE2A1DDEC461004B5A71 /* Build configuration list for PBXNativeTarget "GeoNetTests" */;
+			buildPhases = (
+				B912DE1A1DDEC461004B5A71 /* Sources */,
+				B912DE1B1DDEC461004B5A71 /* Frameworks */,
+				B912DE1C1DDEC461004B5A71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B912DE201DDEC461004B5A71 /* PBXTargetDependency */,
+			);
+			name = GeoNetTests;
+			productName = GeoNetTests;
+			productReference = B912DE1E1DDEC461004B5A71 /* GeoNetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B912DE001DDEC461004B5A71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Tony Li";
+				TargetAttributes = {
+					B912DE071DDEC461004B5A71 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5W5KKWP2K5;
+						ProvisioningStyle = Automatic;
+					};
+					B912DE1D1DDEC461004B5A71 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5W5KKWP2K5;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B912DE071DDEC461004B5A71;
+					};
+				};
+			};
+			buildConfigurationList = B912DE031DDEC461004B5A71 /* Build configuration list for PBXProject "GeoNet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B912DDFF1DDEC461004B5A71;
+			productRefGroup = B912DE091DDEC461004B5A71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B912DE071DDEC461004B5A71 /* GeoNet */,
+				B912DE1D1DDEC461004B5A71 /* GeoNetTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B912DE061DDEC461004B5A71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B912DE181DDEC461004B5A71 /* LaunchScreen.storyboard in Resources */,
+				B912DE151DDEC461004B5A71 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B912DE1C1DDEC461004B5A71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B912DE041DDEC461004B5A71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B912DE3E1DDEC7B6004B5A71 /* ReportShakingViewController.swift in Sources */,
+				B912DE381DDEC625004B5A71 /* QuakesViewController.swift in Sources */,
+				B912DE441DDEC832004B5A71 /* ShakingViewController.swift in Sources */,
+				B912DE401DDEC7C7004B5A71 /* GeoNetViewControllers.swift in Sources */,
+				B912DE461DDEC84A004B5A71 /* VolcanoesViewController.swift in Sources */,
+				B912DE421DDEC81E004B5A71 /* NewsViewController.swift in Sources */,
+				B912DE2F1DDEC49A004B5A71 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B912DE1A1DDEC461004B5A71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B912DE231DDEC461004B5A71 /* GeoNetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B912DE201DDEC461004B5A71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B912DE071DDEC461004B5A71 /* GeoNet */;
+			targetProxy = B912DE1F1DDEC461004B5A71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B912DE161DDEC461004B5A71 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B912DE171DDEC461004B5A71 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B912DE251DDEC461004B5A71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B912DE261DDEC461004B5A71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B912DE281DDEC461004B5A71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5W5KKWP2K5;
+				INFOPLIST_FILE = GeoNet/App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = li.crazytony.GeoNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B912DE291DDEC461004B5A71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5W5KKWP2K5;
+				INFOPLIST_FILE = GeoNet/App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = li.crazytony.GeoNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B912DE2B1DDEC461004B5A71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5W5KKWP2K5;
+				INFOPLIST_FILE = GeoNetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = li.crazytony.GeoNetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoNet.app/GeoNet";
+			};
+			name = Debug;
+		};
+		B912DE2C1DDEC461004B5A71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5W5KKWP2K5;
+				INFOPLIST_FILE = GeoNetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = li.crazytony.GeoNetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoNet.app/GeoNet";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B912DE031DDEC461004B5A71 /* Build configuration list for PBXProject "GeoNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B912DE251DDEC461004B5A71 /* Debug */,
+				B912DE261DDEC461004B5A71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B912DE271DDEC461004B5A71 /* Build configuration list for PBXNativeTarget "GeoNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B912DE281DDEC461004B5A71 /* Debug */,
+				B912DE291DDEC461004B5A71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B912DE2A1DDEC461004B5A71 /* Build configuration list for PBXNativeTarget "GeoNetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B912DE2B1DDEC461004B5A71 /* Debug */,
+				B912DE2C1DDEC461004B5A71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B912DE001DDEC461004B5A71 /* Project object */;
+}
