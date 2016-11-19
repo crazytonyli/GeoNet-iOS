@@ -1,0 +1,6 @@
+framework module Pods_GeoNet {
+  umbrella header "Pods-GeoNet-umbrella.h"
+
+  export *
+  module * { export * }
+}
