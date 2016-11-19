@@ -33,6 +33,21 @@ enum QuakeIntensity {
 
 }
 
+extension QuakeIntensity: CustomStringConvertible {
+
+    var description: String {
+        switch self {
+        case .unnoticeable: return "Unnoticeable"
+        case .weak: return "Weak"
+        case .light: return "Light"
+        case .moderate: return "Moderate"
+        case .strong: return "Strong"
+        case .severe: return "Severe"
+        }
+    }
+
+}
+
 enum QuakeMMI: Int {
 
     case imperceptible = 1

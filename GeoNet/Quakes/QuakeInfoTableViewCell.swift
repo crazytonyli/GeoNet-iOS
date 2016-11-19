@@ -25,7 +25,7 @@ class QuakeInfoTableViewCell: UITableViewCell {
         attributeValuesLabel = UILabel()
         attributeValuesLabel.numberOfLines = 0
         timeLabel = UILabel()
-        timeLabel.font = .systemFont(ofSize: 12)
+        timeLabel.font = .italicSystemFont(ofSize: 11)
 
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
@@ -40,21 +40,21 @@ class QuakeInfoTableViewCell: UITableViewCell {
             intensityIndicatorView.topAnchor.constraint(equalTo: contentView.topAnchor),
             intensityIndicatorView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             intensityIndicatorView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-            intensityIndicatorView.widthAnchor.constraint(equalToConstant: 20),
+            intensityIndicatorView.widthAnchor.constraint(equalToConstant: 10),
 
             mapView.topAnchor.constraint(equalTo: contentView.topAnchor),
             mapView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             mapView.leftAnchor.constraint(equalTo: intensityIndicatorView.rightAnchor),
             mapView.widthAnchor.constraint(equalToConstant: 60),
 
-            attributeNamesLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15),
-            attributeNamesLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15),
+            attributeNamesLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
+            attributeNamesLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
             attributeNamesLabel.leftAnchor.constraint(equalTo: mapView.rightAnchor),
 
             attributeValuesLabel.topAnchor.constraint(equalTo: attributeNamesLabel.topAnchor),
             attributeValuesLabel.bottomAnchor.constraint(equalTo: attributeNamesLabel.bottomAnchor),
             attributeValuesLabel.leftAnchor.constraint(equalTo: attributeNamesLabel.rightAnchor, constant: 3),
-            attributeValuesLabel.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor),
+            attributeValuesLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5),
 
             timeLabel.topAnchor.constraint(equalTo: attributeValuesLabel.topAnchor),
             timeLabel.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor)
@@ -93,7 +93,7 @@ extension QuakeInfoTableViewCell {
         return NSAttributedString(string: lines.joined(separator: "\n"),
                                   attributes: [NSParagraphStyleAttributeName: style,
                                                NSForegroundColorAttributeName: color,
-                                               NSFontAttributeName: UIFont.systemFont(ofSize: 12)])
+                                               NSFontAttributeName: UIFont.systemFont(ofSize: 10)])
     }
 
     func update(with quake: Quake) {
@@ -106,9 +106,10 @@ extension QuakeInfoTableViewCell {
         attributeValuesLabel.attributedText = attributedString(
             withLines: [String(format: "%.1f", quake.magnitude),
                         String(format: "%.0fkm", quake.depth),
-                        "blah", quake.locality, dateFormatter.string(from: quake.time)],
+                        quake.mmi.intensity.description, quake.locality,
+                        dateFormatter.string(from: quake.time)],
             color: .black)
-        timeLabel.text = TTTTimeIntervalFormatter().stringForTimeInterval(from: quake.time, to: Date())
+        timeLabel.text = TTTTimeIntervalFormatter().stringForTimeInterval(from: Date(), to: quake.time)
     }
 
 }
