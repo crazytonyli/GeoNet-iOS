@@ -5,6 +5,7 @@ target 'GeoNet' do
 
   pod 'Result', '~> 3.0'
   pod 'SwiftyJSON', '~> 3.1'
+  pod 'MWFeedParser', '~> 1.0'
   pod 'FormatterKit/TimeIntervalFormatter', '~> 1.8'
 
   target 'GeoNetTests' do
