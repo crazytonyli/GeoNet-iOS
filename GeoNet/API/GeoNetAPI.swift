@@ -21,10 +21,12 @@ func APISession() -> URLSession {
     return _APISession!
 }
 
-func APIRequest(path: String, query: [String: CustomStringConvertible]) -> URLRequest {
+func APIRequest(path: String, query: [String: CustomStringConvertible]? = nil) -> URLRequest {
     let urlComp = NSURLComponents(string: "https://api.geonet.org.nz")!
     urlComp.path = path
-    urlComp.queryItems = query.map { URLQueryItem(name: $0.key, value: $0.value.description) }
+    if let query = query {
+        urlComp.queryItems = query.map { URLQueryItem(name: $0.key, value: $0.value.description) }
+    }
     return URLRequest(url: urlComp.url!)
 }
 
@@ -67,6 +69,12 @@ extension URLSession {
     @discardableResult func quakes(with mmi: QuakeMMI, completion: @escaping (Result<[Quake], GeoNetAPIError>) -> Void) -> URLSessionTask {
         return GeoJSON(request: APIRequest(path: "/quake", query: ["MMI": mmi.rawValue])) { result in
             completion(result.map { $0["features"].array?.flatMap { Quake(feature: $0) } ?? [] })
+        }
+    }
+
+    @discardableResult func volcanoes(completion: @escaping (Result<[Volcano], GeoNetAPIError>) -> Void) -> URLSessionTask {
+        return GeoJSON(request: APIRequest(path: "/volcano/val")) { result in
+            completion(result.map { $0["features"].array?.flatMap { Volcano(feature: $0) } ?? [] })
         }
     }
 

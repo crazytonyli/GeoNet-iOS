@@ -126,3 +126,90 @@ struct Quake {
     }
 
 }
+
+enum VolcanoAlertLevel: Int {
+
+    case noUnrest
+
+    case minorUnrest
+    case moderateUnrest
+
+    case minorEruption
+    case moderateEruption
+    case majorEruption
+
+    var color: UIColor {
+        switch self {
+        case .noUnrest: return UIColor(hexRGB: 0xe7deec)
+        case .minorUnrest: return UIColor(hexRGB: 0xdcc9e0)
+        case .moderateUnrest: return UIColor(hexRGB: 0xd1b5d3)
+        case .minorEruption: return UIColor(hexRGB: 0xa867a2)
+        case .moderateEruption: return UIColor(hexRGB: 0x954990)
+        case .majorEruption: return UIColor(hexRGB: 0x832c82)
+        }
+    }
+
+}
+
+struct Volcano {
+
+    /// a unique identifier for the volcano.
+    var identifier: String
+
+    /// the volcano title.
+    var title: String
+
+    /// volcanic alert level.
+    var level: VolcanoAlertLevel
+
+    /// volcanic activity.
+    var activity: String
+
+    /// most likely hazards.
+    var hazards: String
+
+    var coordinates: CLLocationCoordinate2D
+
+    init?(feature: JSON) {
+        let geometry = feature["geometry"]
+        let properties = feature["properties"]
+        guard geometry["type"] == "Point",
+            let identifier = properties["volcanoID"].string,
+            let title = properties["volcanoTitle"].string,
+            let level = properties["level"].int,
+            let alertLevel = VolcanoAlertLevel(rawValue: level),
+            let activity = properties["activity"].string,
+            let hazards = properties["hazards"].string,
+            let coordinates = geometry["coordinates"].array
+            else {
+                return nil
+        }
+        self.identifier = identifier
+        self.title = title
+        self.level = alertLevel
+        self.activity = activity
+        self.hazards = hazards
+        self.coordinates = CLLocationCoordinate2D(latitude: coordinates[0].double!,
+                                                  longitude: coordinates[1].double!)
+    }
+
+}
+
+extension Volcano: Comparable {
+    
+    public static func ==(lhs: Volcano, rhs: Volcano) -> Bool {
+        return lhs.level == rhs.level && lhs.title == rhs.title
+    }
+
+
+    static func <(lhs: Volcano, rhs: Volcano) -> Bool {
+        if lhs.level.rawValue > rhs.level.rawValue {
+            return true
+        }
+        if lhs.level.rawValue == rhs.level.rawValue {
+            return lhs.title < rhs.title
+        }
+        return false
+    }
+
+}
