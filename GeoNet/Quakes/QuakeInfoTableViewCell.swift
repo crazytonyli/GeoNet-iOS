@@ -67,7 +67,7 @@ class QuakeInfoTableViewCell: UITableViewCell {
 
 }
 
-private extension QuakeIntensity {
+extension QuakeIntensity {
 
     /// http://info.geonet.org.nz/display/quake/Shaking+Intensity
     var color: UIColor {
@@ -79,6 +79,7 @@ private extension QuakeIntensity {
         case .moderate: rgb = 0x008000
         case .strong: rgb = 0xFFA500
         case .severe: rgb = 0xFF0000
+        case .extreme: rgb = 0xCD0000
         }
         return UIColor(hexRGB: rgb)
     }

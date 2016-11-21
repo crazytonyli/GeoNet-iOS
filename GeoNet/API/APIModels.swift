@@ -11,7 +11,7 @@ import CoreLocation
 import SwiftyJSON
 
 /// http://info.geonet.org.nz/display/quake/Shaking+Intensity
-enum QuakeIntensity {
+enum QuakeIntensity: Int {
 
     case unnoticeable
     case weak
@@ -19,6 +19,7 @@ enum QuakeIntensity {
     case moderate
     case strong
     case severe
+    case extreme
 
     var MMIRange: Range<Int> {
         switch self {
@@ -27,7 +28,8 @@ enum QuakeIntensity {
         case .light: return (QuakeMMI.light.rawValue..<QuakeMMI.moderate.rawValue)
         case .moderate: return (QuakeMMI.moderate.rawValue..<QuakeMMI.strong.rawValue)
         case .strong: return (QuakeMMI.strong.rawValue..<QuakeMMI.damaging.rawValue)
-        case .severe: return (QuakeMMI.damaging.rawValue..<Int.max)
+        case .severe: return (QuakeMMI.damaging.rawValue..<QuakeMMI.heavilyDamaging.rawValue)
+        case .extreme: return (QuakeMMI.heavilyDamaging.rawValue..<Int.max)
         }
     }
 
@@ -43,6 +45,7 @@ extension QuakeIntensity: CustomStringConvertible {
         case .moderate: return "Moderate"
         case .strong: return "Strong"
         case .severe: return "Severe"
+        case .extreme: return "Extreme"
         }
     }
 
@@ -64,7 +67,7 @@ enum QuakeMMI: Int {
     case completelyDevastating
 
     var intensity: QuakeIntensity {
-        let intensities: [QuakeIntensity] = [.unnoticeable, .weak, .light, .moderate, .strong, .severe]
+        let intensities: [QuakeIntensity] = [.unnoticeable, .weak, .light, .moderate, .strong, .severe, .extreme]
         return intensities.first { $0.MMIRange.contains(self.rawValue) } ?? .unnoticeable
     }
 
