@@ -11,6 +11,8 @@ import FormatterKit
 
 class QuakeInfoTableViewCell: UITableViewCell {
 
+    static let intensityIndicatorWidth: CGFloat = 10
+
     let intensityIndicatorView: UIView
     let mapView: UIImageView
     let attributeNamesLabel: UILabel
@@ -40,7 +42,7 @@ class QuakeInfoTableViewCell: UITableViewCell {
             intensityIndicatorView.topAnchor.constraint(equalTo: contentView.topAnchor),
             intensityIndicatorView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             intensityIndicatorView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-            intensityIndicatorView.widthAnchor.constraint(equalToConstant: 10),
+            intensityIndicatorView.widthAnchor.constraint(equalToConstant: QuakeInfoTableViewCell.intensityIndicatorWidth),
 
             mapView.topAnchor.constraint(equalTo: contentView.topAnchor),
             mapView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),

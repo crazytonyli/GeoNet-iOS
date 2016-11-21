@@ -37,6 +37,7 @@ class QuakesViewController: GeoNetViewController {
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
+        tableView.separatorInset = UIEdgeInsetsMake(0, QuakeInfoTableViewCell.intensityIndicatorWidth, 0, 0)
         tableView.register(QuakeInfoTableViewCell.self, forCellReuseIdentifier: "cell")
         view.addSubview(tableView)
         self.tableView = tableView

@@ -15,6 +15,7 @@ private class IntensityCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         indicatorView = UIView()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.addSubview(indicatorView)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,6 +28,12 @@ private class IntensityCell: UITableViewCell {
         textLabel!.sizeToFit()
         textLabel!.frame.origin = CGPoint(x: indicatorView.frame.maxX + 10,
                                           y: round(bounds.height - textLabel!.bounds.height) / 2)
+    }
+
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        let color = indicatorView.backgroundColor
+        super.setHighlighted(highlighted, animated: animated)
+        indicatorView.backgroundColor = color
     }
 
 }
@@ -53,7 +60,7 @@ class IntensitiesViewController: UITableViewController {
         tableView.rowHeight = 44
         tableView.tableFooterView = UIView()
         tableView.register(IntensityCell.self, forCellReuseIdentifier: "cell")
-        preferredContentSize = CGSize(width: 320, height: CGFloat(intensities.count) * tableView.rowHeight - 1)
+        preferredContentSize = CGSize(width: 200, height: CGFloat(intensities.count) * tableView.rowHeight - 1)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
