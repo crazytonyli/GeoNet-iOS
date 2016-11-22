@@ -26,6 +26,7 @@
 		B96909AB1DDF0B4700896042 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909AA1DDF0B4700896042 /* UIColorExtension.swift */; };
 		B96909AF1DE0FDE900896042 /* IntensitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909AE1DE0FDE900896042 /* IntensitiesViewController.swift */; };
 		B96909B11DE2BD8B00896042 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909B01DE2BD8B00896042 /* UserDefaults.swift */; };
+		B96909B51DE3CE2B00896042 /* QuakeLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909B41DE3CE2B00896042 /* QuakeLocationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		B96909AA1DDF0B4700896042 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B96909AE1DE0FDE900896042 /* IntensitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntensitiesViewController.swift; sourceTree = "<group>"; };
 		B96909B01DE2BD8B00896042 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		B96909B41DE3CE2B00896042 /* QuakeLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeLocationView.swift; sourceTree = "<group>"; };
 		E170CF2A7645D3D156A42C6E /* Pods_GeoNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,7 @@
 			children = (
 				B96909AE1DE0FDE900896042 /* IntensitiesViewController.swift */,
 				B96909A71DDF05AE00896042 /* QuakeInfoTableViewCell.swift */,
+				B96909B41DE3CE2B00896042 /* QuakeLocationView.swift */,
 				B912DE371DDEC625004B5A71 /* QuakesViewController.swift */,
 			);
 			path = Quakes;
@@ -428,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96909B51DE3CE2B00896042 /* QuakeLocationView.swift in Sources */,
 				B96909A41DDEE57100896042 /* APIModels.swift in Sources */,
 				B912DE3E1DDEC7B6004B5A71 /* ReportShakingViewController.swift in Sources */,
 				B912DE381DDEC625004B5A71 /* QuakesViewController.swift in Sources */,

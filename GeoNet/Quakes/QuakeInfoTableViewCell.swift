@@ -14,14 +14,14 @@ class QuakeInfoTableViewCell: UITableViewCell {
     static let intensityIndicatorWidth: CGFloat = 10
 
     let intensityIndicatorView: UIView
-    let mapView: UIImageView
+    let mapView: QuakeLocationView
     let attributeNamesLabel: UILabel
     let attributeValuesLabel: UILabel
     let timeLabel: UILabel
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         intensityIndicatorView = UIView()
-        mapView = UIImageView()
+        mapView = QuakeLocationView(frame: .zero)
         attributeNamesLabel = UILabel()
         attributeNamesLabel.numberOfLines = 0
         attributeValuesLabel = UILabel()
@@ -47,7 +47,7 @@ class QuakeInfoTableViewCell: UITableViewCell {
             mapView.topAnchor.constraint(equalTo: contentView.topAnchor),
             mapView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             mapView.leftAnchor.constraint(equalTo: intensityIndicatorView.rightAnchor),
-            mapView.widthAnchor.constraint(equalToConstant: 60),
+            mapView.widthAnchor.constraint(equalToConstant: 80),
 
             attributeNamesLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
             attributeNamesLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
@@ -101,6 +101,7 @@ extension QuakeInfoTableViewCell {
 
     func update(with quake: Quake) {
         intensityIndicatorView.backgroundColor = quake.mmi.intensity.color
+        mapView.epicenter = quake.epicenter
         attributeNamesLabel.attributedText = attributedString(
             withLines: ["Magnitude", "Depth", "Shaking", "Location", "NZST"], color: .lightGray)
         let dateFormatter = DateFormatter()

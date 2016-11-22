@@ -121,8 +121,8 @@ struct Quake {
         self.magnitude = magnitude
         self.locality = locality
         self.mmi = mmi
-        self.epicenter = CLLocationCoordinate2D(latitude: coordinates[0].double!,
-                                                longitude: coordinates[1].double!)
+        self.epicenter = CLLocationCoordinate2D(latitude: coordinates[1].double!,
+                                                longitude: coordinates[0].double!)
     }
 
 }
