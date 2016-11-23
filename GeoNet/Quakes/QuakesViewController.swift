@@ -96,10 +96,6 @@ private extension QuakesViewController {
         }
     }
 
-    func updateTitle(with intensity: QuakeIntensity) {
-
-    }
-
     @objc func loadQuakes() {
         let intensity = UserDefaults.app.selectedIntensity ?? .weak
         guard let mmi = QuakeMMI(rawValue: intensity.MMIRange.lowerBound) else {
