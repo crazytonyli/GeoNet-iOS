@@ -8,9 +8,13 @@
 
 import UIKit
 
-class QuakesViewController: GeoNetViewController {
+class QuakesViewController: UITableViewController {
 
-    var tableView: UITableView?
+    weak var loadQuakesTask: URLSessionTask? {
+        willSet {
+            loadQuakesTask?.cancel()
+        }
+    }
 
     var quakes = [Quake]() {
         didSet {
@@ -20,8 +24,8 @@ class QuakesViewController: GeoNetViewController {
 
     var titleTapGestureRecognizer: UITapGestureRecognizer?
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    init() {
+        super.init(style: .plain)
         title = "Quakes"
     }
     
@@ -32,25 +36,15 @@ class QuakesViewController: GeoNetViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tableView = UITableView(frame: view.bounds)
-        tableView.delegate = self
-        tableView.dataSource = self
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(loadQuakes), for: .valueChanged)
+
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
         tableView.separatorInset = UIEdgeInsetsMake(0, QuakeInfoTableViewCell.intensityIndicatorWidth, 0, 0)
         tableView.register(QuakeInfoTableViewCell.self, forCellReuseIdentifier: "cell")
-        view.addSubview(tableView)
-        self.tableView = tableView
 
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            ])
-
-        loadQuakes(with: UserDefaults.app.selectedIntensity ?? .weak)
+        loadQuakes()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -70,13 +64,13 @@ class QuakesViewController: GeoNetViewController {
 
 }
 
-extension QuakesViewController: UITableViewDelegate, UITableViewDataSource {
+extension QuakesViewController {
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return quakes.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! QuakeInfoTableViewCell
         cell.update(with: quakes[indexPath.row])
         return cell
@@ -97,7 +91,8 @@ private extension QuakesViewController {
         controller.selectionChange = { [unowned self] intensity in
             self.dismiss(animated: true, completion: nil)
             UserDefaults.app.selectedIntensity = intensity
-            self.loadQuakes(with: intensity)
+            self.quakes = []
+            self.loadQuakes()
         }
     }
 
@@ -105,15 +100,17 @@ private extension QuakesViewController {
 
     }
 
-    func loadQuakes(with intensity: QuakeIntensity) {
+    @objc func loadQuakes() {
+        let intensity = UserDefaults.app.selectedIntensity ?? .weak
         guard let mmi = QuakeMMI(rawValue: intensity.MMIRange.lowerBound) else {
             return
         }
 
         navigationItem.title = "Quake (\(intensity.description)+)"
 
-        APISession().quakes(with: mmi) { [weak self] result in
+        loadQuakesTask = APISession().quakes(with: mmi) { [weak self] result in
             guard let `self` = self else { return }
+            self.refreshControl?.endRefreshing()
             switch result {
             case .success(let quakes): self.quakes = quakes
             case .failure(let error): break

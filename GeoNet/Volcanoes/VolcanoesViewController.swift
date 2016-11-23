@@ -50,7 +50,9 @@ private class VolcanoCell: UITableViewCell {
 
 class VolcanoesViewController: UITableViewController {
 
-    var volcanoes = [Volcano]() {
+    fileprivate weak var loadVolcanoesTask: URLSessionTask?
+
+    fileprivate var volcanoes = [Volcano]() {
         didSet { tableView.reloadData() }
     }
 
@@ -66,17 +68,13 @@ class VolcanoesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(loadVolcanoes), for: .valueChanged)
+
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "info")
         tableView.register(VolcanoCell.self, forCellReuseIdentifier: "volcano")
 
-        APISession().volcanoes { [weak self] result in
-            guard let `self` = self else { return }
-            switch result {
-            case .success(let volcanoes):
-                self.volcanoes = volcanoes.sorted()
-            case .failure(let error): break
-            }
-        }
+        loadVolcanoes()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -112,6 +110,22 @@ class VolcanoesViewController: UITableViewController {
         guard indexPath.section == 0 else { return }
         let controller = SFSafariViewController(url: URL(string: "http://info.geonet.org.nz/m/display/volc/Volcanic+Alert+Levels")!)
         present(controller, animated: true, completion: nil)
+    }
+
+}
+
+private extension VolcanoesViewController {
+
+    @objc func loadVolcanoes() {
+        loadVolcanoesTask =  APISession().volcanoes { [weak self] result in
+            guard let `self` = self else { return }
+            self.refreshControl?.endRefreshing()
+            switch result {
+            case .success(let volcanoes):
+                self.volcanoes = volcanoes.sorted()
+            case .failure(let error): break
+            }
+        }
     }
 
 }

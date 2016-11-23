@@ -72,6 +72,9 @@ class NewsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(parse), for: .valueChanged)
+
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
         tableView.register(FeedCell.self, forCellReuseIdentifier: "cell")
@@ -100,7 +103,7 @@ class NewsViewController: UITableViewController {
 
 private extension NewsViewController {
 
-    func parse() {
+    @objc func parse() {
         parser?.stopParsing()
         feedItems = []
 
@@ -118,7 +121,12 @@ extension NewsViewController: MWFeedParserDelegate {
     }
 
     func feedParserDidFinish(_ parser: MWFeedParser!) {
+        refreshControl?.endRefreshing()
         tableView.reloadData()
+    }
+
+    func feedParser(_ parser: MWFeedParser!, didFailWithError error: Error!) {
+        refreshControl?.endRefreshing()
     }
 
 }

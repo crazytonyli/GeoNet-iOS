@@ -11,7 +11,9 @@ import Foundation
 extension UserDefaults {
 
     class var app: UserDefaults {
-        return .standard
+        let instance = UserDefaults.standard
+        instance.register(defaults: [Key.selectedIntensity.rawValue: QuakeIntensity.weak.rawValue])
+        return instance
     }
 
 }
