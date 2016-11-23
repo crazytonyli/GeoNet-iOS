@@ -21,7 +21,6 @@
 		B912DE441DDEC832004B5A71 /* ShakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE431DDEC832004B5A71 /* ShakingViewController.swift */; };
 		B912DE461DDEC84A004B5A71 /* VolcanoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE451DDEC84A004B5A71 /* VolcanoesViewController.swift */; };
 		B96909A41DDEE57100896042 /* APIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909A31DDEE57100896042 /* APIModels.swift */; };
-		B96909A61DDEEC7700896042 /* GeoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909A51DDEEC7700896042 /* GeoJSON.swift */; };
 		B96909A81DDF05AE00896042 /* QuakeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909A71DDF05AE00896042 /* QuakeInfoTableViewCell.swift */; };
 		B96909AB1DDF0B4700896042 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909AA1DDF0B4700896042 /* UIColorExtension.swift */; };
 		B96909AF1DE0FDE900896042 /* IntensitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909AE1DE0FDE900896042 /* IntensitiesViewController.swift */; };
@@ -61,7 +60,6 @@
 		B912DE431DDEC832004B5A71 /* ShakingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakingViewController.swift; sourceTree = "<group>"; };
 		B912DE451DDEC84A004B5A71 /* VolcanoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolcanoesViewController.swift; sourceTree = "<group>"; };
 		B96909A31DDEE57100896042 /* APIModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModels.swift; sourceTree = "<group>"; };
-		B96909A51DDEEC7700896042 /* GeoJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoJSON.swift; sourceTree = "<group>"; };
 		B96909A71DDF05AE00896042 /* QuakeInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeInfoTableViewCell.swift; sourceTree = "<group>"; };
 		B96909AA1DDF0B4700896042 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B96909AE1DE0FDE900896042 /* IntensitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntensitiesViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				B96909A31DDEE57100896042 /* APIModels.swift */,
-				B96909A51DDEEC7700896042 /* GeoJSON.swift */,
 				B90BB5AC1DDEDAFA005A6132 /* GeoNetAPI.swift */,
 			);
 			path = API;
@@ -438,7 +435,6 @@
 				B96909A81DDF05AE00896042 /* QuakeInfoTableViewCell.swift in Sources */,
 				B912DE441DDEC832004B5A71 /* ShakingViewController.swift in Sources */,
 				B912DE401DDEC7C7004B5A71 /* GeoNetViewControllers.swift in Sources */,
-				B96909A61DDEEC7700896042 /* GeoJSON.swift in Sources */,
 				B912DE461DDEC84A004B5A71 /* VolcanoesViewController.swift in Sources */,
 				B912DE421DDEC81E004B5A71 /* NewsViewController.swift in Sources */,
 				B90BB5AD1DDEDAFA005A6132 /* GeoNetAPI.swift in Sources */,
