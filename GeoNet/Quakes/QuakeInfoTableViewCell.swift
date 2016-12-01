@@ -9,35 +9,48 @@
 import UIKit
 import FormatterKit
 
+private enum QuakeAttribute: String {
+
+    case magnitude = "Magnitude"
+    case depth = "Depth"
+    case shaking = "Shaking"
+    case location = "Location"
+    case nzst = "NZST"
+
+}
+
 class QuakeInfoTableViewCell: UITableViewCell {
 
     static let intensityIndicatorWidth: CGFloat = 10
 
-    let intensityIndicatorView: UIView
-    let mapView: QuakeLocationView
-    let attributeNamesLabel: UILabel
-    let attributeValuesLabel: UILabel
-    let timeLabel: UILabel
+    fileprivate let intensityIndicatorView: UIView
+    fileprivate let mapView: QuakeLocationView
+    fileprivate let attributesView: UIStackView
+    fileprivate var attributeValueLabels = [QuakeAttribute: UILabel]()
+    fileprivate let timeLabel: UILabel
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         intensityIndicatorView = UIView()
         mapView = QuakeLocationView(frame: .zero)
-        attributeNamesLabel = UILabel()
-        attributeNamesLabel.numberOfLines = 0
-        attributeValuesLabel = UILabel()
-        attributeValuesLabel.numberOfLines = 0
+        attributesView = UIStackView()
+        attributesView.axis = .vertical
+        attributesView.distribution = .equalSpacing
+        attributesView.spacing = 3
         timeLabel = UILabel()
         timeLabel.font = .italicSystemFont(ofSize: 11)
 
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        [intensityIndicatorView, mapView, attributeNamesLabel, attributeValuesLabel, timeLabel]
+        [intensityIndicatorView, mapView, attributesView, timeLabel]
             .forEach {
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 contentView.addSubview($0)
         }
 
-        attributeNamesLabel.setContentHuggingPriority(UILayoutPriorityRequired, for: .horizontal)
+        [QuakeAttribute.magnitude, .depth, .shaking, .location, .nzst].forEach {
+            addAttributeView(for: $0)
+        }
+
         NSLayoutConstraint.activate([
             intensityIndicatorView.topAnchor.constraint(equalTo: contentView.topAnchor),
             intensityIndicatorView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
@@ -47,18 +60,14 @@ class QuakeInfoTableViewCell: UITableViewCell {
             mapView.topAnchor.constraint(equalTo: contentView.topAnchor),
             mapView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             mapView.leftAnchor.constraint(equalTo: intensityIndicatorView.rightAnchor),
-            mapView.widthAnchor.constraint(equalToConstant: 80),
+            mapView.widthAnchor.constraint(equalToConstant: 100),
 
-            attributeNamesLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
-            attributeNamesLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
-            attributeNamesLabel.leftAnchor.constraint(equalTo: mapView.rightAnchor),
+            attributesView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
+            attributesView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
+            attributesView.leftAnchor.constraint(equalTo: mapView.rightAnchor),
+            attributesView.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor),
 
-            attributeValuesLabel.topAnchor.constraint(equalTo: attributeNamesLabel.topAnchor),
-            attributeValuesLabel.bottomAnchor.constraint(equalTo: attributeNamesLabel.bottomAnchor),
-            attributeValuesLabel.leftAnchor.constraint(equalTo: attributeNamesLabel.rightAnchor, constant: 3),
-            attributeValuesLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5),
-
-            timeLabel.topAnchor.constraint(equalTo: attributeValuesLabel.topAnchor),
+            timeLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
             timeLabel.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor)
             ])
     }
@@ -90,29 +99,49 @@ extension QuakeIntensity {
 
 extension QuakeInfoTableViewCell {
 
-    private func attributedString(withLines lines: [String], color: UIColor) -> NSAttributedString {
-        let style = NSMutableParagraphStyle()
-        style.lineHeightMultiple = 1.2
-        return NSAttributedString(string: lines.joined(separator: "\n"),
-                                  attributes: [NSParagraphStyleAttributeName: style,
-                                               NSForegroundColorAttributeName: color,
-                                               NSFontAttributeName: UIFont.systemFont(ofSize: 10)])
+    fileprivate func addAttributeView(for attribute: QuakeAttribute) {
+        let view = UIView()
+        let nameLabel = UILabel()
+        nameLabel.font = .systemFont(ofSize: 12)
+        nameLabel.text = attribute.rawValue
+        nameLabel.textColor = .lightGray
+        view.addSubview(nameLabel)
+        let valueLabel = UILabel()
+        valueLabel.font = .systemFont(ofSize: 12)
+        valueLabel.textColor = .black
+        valueLabel.numberOfLines = 0
+        view.addSubview(valueLabel)
+
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        valueLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            nameLabel.topAnchor.constraint(equalTo: view.topAnchor),
+            nameLabel.leftAnchor.constraint(equalTo: view.leftAnchor),
+            nameLabel.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor),
+            nameLabel.widthAnchor.constraint(equalToConstant: 70),
+            valueLabel.topAnchor.constraint(equalTo: nameLabel.topAnchor),
+            valueLabel.leftAnchor.constraint(equalTo: nameLabel.rightAnchor, constant: 3),
+            valueLabel.rightAnchor.constraint(equalTo: view.rightAnchor),
+            valueLabel.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor),
+        ])
+
+        attributeValueLabels[attribute] = valueLabel
+        attributesView.addArrangedSubview(view)
     }
 
     func update(with quake: Quake) {
         intensityIndicatorView.backgroundColor = quake.mmi.intensity.color
         mapView.epicenter = quake.epicenter
-        attributeNamesLabel.attributedText = attributedString(
-            withLines: ["Magnitude", "Depth", "Shaking", "Location", "NZST"], color: .lightGray)
+        attributeValueLabels[.magnitude]?.text = String(format: "%.1f", quake.magnitude)
+        attributeValueLabels[.depth]?.text = String(format: "%.0fkm", quake.depth)
+        attributeValueLabels[.shaking]?.text = quake.mmi.intensity.description
+        attributeValueLabels[.location]?.text = quake.locality
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .medium
-        attributeValuesLabel.attributedText = attributedString(
-            withLines: [String(format: "%.1f", quake.magnitude),
-                        String(format: "%.0fkm", quake.depth),
-                        quake.mmi.intensity.description, quake.locality,
-                        dateFormatter.string(from: quake.time)],
-            color: .black)
+        attributeValueLabels[.nzst]?.text = dateFormatter.string(from: quake.time)
+
         timeLabel.text = TTTTimeIntervalFormatter().stringForTimeInterval(from: Date(), to: quake.time)
     }
 
