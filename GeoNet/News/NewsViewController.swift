@@ -57,12 +57,14 @@ private class FeedCell: UITableViewCell {
 
 class NewsViewController: UITableViewController {
 
-    fileprivate var parser: MWFeedParser?
+    fileprivate let parser: MWFeedParser = MWFeedParser(feedURL: URL(string: RSSFeedURL)!)
+    fileprivate var parsingFeedItems: [MWFeedItem]?
     fileprivate var feedItems = [MWFeedItem]()
 
     init() {
         super.init(style: .plain)
         title = "News"
+        parser.delegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -104,12 +106,19 @@ class NewsViewController: UITableViewController {
 private extension NewsViewController {
 
     @objc func parse() {
-        parser?.stopParsing()
-        feedItems = []
+        guard !parser.isParsing else { return }
 
-        parser = MWFeedParser(feedURL: URL(string: RSSFeedURL)!)
-        parser?.delegate = self
-        parser?.parse()
+        DispatchQueue.global().async {
+            self.parsingFeedItems = []
+            if self.parser.parse() {
+                self.feedItems = self.parsingFeedItems ?? []
+            }
+
+            DispatchQueue.main.async {
+                self.refreshControl?.endRefreshing()
+                self.tableView?.reloadData()
+            }
+        }
     }
 
 }
@@ -117,7 +126,7 @@ private extension NewsViewController {
 extension NewsViewController: MWFeedParserDelegate {
 
     func feedParser(_ parser: MWFeedParser!, didParseFeedItem item: MWFeedItem!) {
-        feedItems.append(item)
+        parsingFeedItems?.append(item)
     }
 
     func feedParserDidFinish(_ parser: MWFeedParser!) {
