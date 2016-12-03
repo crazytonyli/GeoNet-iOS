@@ -133,7 +133,7 @@ extension QuakeInfoTableViewCell {
         intensityIndicatorView.backgroundColor = quake.mmi.intensity.color
         mapView.epicenter = quake.epicenter
         attributeValueLabels[.magnitude]?.text = String(format: "%.1f", quake.magnitude)
-        attributeValueLabels[.depth]?.text = String(format: "%.0fkm", quake.depth)
+        attributeValueLabels[.depth]?.text = String(format: "%.0f km", quake.depth)
         attributeValueLabels[.shaking]?.text = quake.mmi.intensity.description
         attributeValueLabels[.location]?.text = quake.locality
 
