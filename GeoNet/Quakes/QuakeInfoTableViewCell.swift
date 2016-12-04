@@ -20,35 +20,27 @@ private enum QuakeAttribute: String {
 }
 
 class QuakeInfoTableViewCell: UITableViewCell {
-
     static let intensityIndicatorWidth: CGFloat = 10
 
-    fileprivate let intensityIndicatorView: UIView
-    fileprivate let mapView: QuakeLocationView
-    fileprivate let attributesView: UIStackView
-    fileprivate var attributeValueLabels = [QuakeAttribute: UILabel]()
-    fileprivate let timeLabel: UILabel
+    private let intensityIndicatorView: UIView
+    private let mapView: QuakeLocationView
+    private let infoView: QuakeInfoView
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         intensityIndicatorView = UIView()
         mapView = QuakeLocationView(frame: .zero)
-        attributesView = UIStackView()
-        attributesView.axis = .vertical
-        attributesView.distribution = .equalSpacing
-        attributesView.spacing = 3
-        timeLabel = UILabel()
-        timeLabel.font = .italicSystemFont(ofSize: 11)
+        infoView = QuakeInfoView(frame: .zero)
+        infoView.layoutMargins = .zero
 
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        [intensityIndicatorView, mapView, attributesView, timeLabel]
+        selectedBackgroundView = UIView()
+        selectedBackgroundView?.backgroundColor = UIColor(hexRGB: 0xeeeeee)
+
+        [intensityIndicatorView, mapView, infoView]
             .forEach {
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 contentView.addSubview($0)
-        }
-
-        [QuakeAttribute.magnitude, .depth, .shaking, .location, .nzst].forEach {
-            addAttributeView(for: $0)
         }
 
         NSLayoutConstraint.activate([
@@ -62,13 +54,10 @@ class QuakeInfoTableViewCell: UITableViewCell {
             mapView.leftAnchor.constraint(equalTo: intensityIndicatorView.rightAnchor),
             mapView.widthAnchor.constraint(equalToConstant: 100),
 
-            attributesView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
-            attributesView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
-            attributesView.leftAnchor.constraint(equalTo: mapView.rightAnchor),
-            attributesView.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor),
-
-            timeLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
-            timeLabel.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor)
+            infoView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
+            infoView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
+            infoView.leftAnchor.constraint(equalTo: mapView.rightAnchor),
+            infoView.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor),
             ])
     }
     
@@ -76,28 +65,80 @@ class QuakeInfoTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        let color = intensityIndicatorView.backgroundColor
+        super.setHighlighted(highlighted, animated: animated)
+        intensityIndicatorView.backgroundColor = color
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        let color = intensityIndicatorView.backgroundColor
+        super.setSelected(selected, animated: animated)
+        intensityIndicatorView.backgroundColor = color
+    }
+
+    func update(with quake: Quake) {
+        intensityIndicatorView.backgroundColor = quake.mmi.intensity.color
+        mapView.epicenter = quake.epicenter
+        infoView.update(with: quake)
+    }
+    
 }
 
-extension QuakeIntensity {
+class QuakeInfoView: UIView {
 
-    /// http://info.geonet.org.nz/display/quake/Shaking+Intensity
-    var color: UIColor {
-        let rgb: UInt
-        switch self {
-        case .unnoticeable: rgb = 0xf5f5f5
-        case .weak: rgb = 0x808080
-        case .light: rgb = 0x1E90FF
-        case .moderate: rgb = 0x008000
-        case .strong: rgb = 0xFFA500
-        case .severe: rgb = 0xFF0000
-        case .extreme: rgb = 0xCD0000
+    fileprivate let attributesView: UIStackView
+    fileprivate var attributeValueLabels = [QuakeAttribute: UILabel]()
+    fileprivate let timeLabel: UILabel
+
+    private var managedConstraints = [NSLayoutConstraint]()
+
+    override init(frame: CGRect) {
+        attributesView = UIStackView()
+        attributesView.axis = .vertical
+        attributesView.distribution = .equalSpacing
+        attributesView.spacing = 3
+        timeLabel = UILabel()
+        timeLabel.font = .italicSystemFont(ofSize: 11)
+
+        super.init(frame: frame)
+
+        addSubview(attributesView)
+        addSubview(timeLabel)
+
+        [QuakeAttribute.magnitude, .depth, .shaking, .location, .nzst].forEach {
+            addAttributeView(for: $0)
         }
-        return UIColor(hexRGB: rgb)
+
+        attributesView.translatesAutoresizingMaskIntoConstraints = false
+        timeLabel.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func updateConstraints() {
+        NSLayoutConstraint.deactivate(managedConstraints)
+        managedConstraints.removeAll()
+
+        managedConstraints = [
+            attributesView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor),
+            attributesView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
+            attributesView.leftAnchor.constraint(equalTo: layoutMarginsGuide.leftAnchor),
+            attributesView.rightAnchor.constraint(equalTo: layoutMarginsGuide.rightAnchor),
+
+            timeLabel.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor),
+            timeLabel.rightAnchor.constraint(equalTo: layoutMarginsGuide.rightAnchor)
+        ]
+        NSLayoutConstraint.activate(managedConstraints)
+
+        super.updateConstraints()
     }
 
 }
 
-extension QuakeInfoTableViewCell {
+extension QuakeInfoView {
 
     fileprivate func addAttributeView(for attribute: QuakeAttribute) {
         let view = UIView()
@@ -130,8 +171,6 @@ extension QuakeInfoTableViewCell {
     }
 
     func update(with quake: Quake) {
-        intensityIndicatorView.backgroundColor = quake.mmi.intensity.color
-        mapView.epicenter = quake.epicenter
         attributeValueLabels[.magnitude]?.text = String(format: "%.1f", quake.magnitude)
         attributeValueLabels[.depth]?.text = String(format: "%.0f km", quake.depth)
         attributeValueLabels[.shaking]?.text = quake.mmi.intensity.description

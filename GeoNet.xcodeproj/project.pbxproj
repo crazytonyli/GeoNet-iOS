@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		16DB15006D48BC506B9AEE8D /* Pods_GeoNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E170CF2A7645D3D156A42C6E /* Pods_GeoNet.framework */; };
+		4AB6A4071DF39C6500E1073C /* QuakeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB6A4061DF39C6500E1073C /* QuakeMapViewController.swift */; };
+		4AB6A4091DF411E600E1073C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB6A4081DF411E600E1073C /* Appearance.swift */; };
 		76C773B238E8789A6D634ED2 /* Pods_GeoNetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1036B3C02B300384AF45F7A7 /* Pods_GeoNetTests.framework */; };
 		B90BB5AD1DDEDAFA005A6132 /* GeoNetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90BB5AC1DDEDAFA005A6132 /* GeoNetAPI.swift */; };
 		B912DE151DDEC461004B5A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B912DE141DDEC461004B5A71 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		1036B3C02B300384AF45F7A7 /* Pods_GeoNetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoNetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A78E3117C27F4795FEA6113 /* Pods-GeoNetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoNetTests/Pods-GeoNetTests.release.xcconfig"; sourceTree = "<group>"; };
+		4AB6A4061DF39C6500E1073C /* QuakeMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeMapViewController.swift; sourceTree = "<group>"; };
+		4AB6A4081DF411E600E1073C /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		59A240143E0B3FC95ED295A5 /* Pods-GeoNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNet.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoNet/Pods-GeoNet.release.xcconfig"; sourceTree = "<group>"; };
 		65C9323A37EE874956A3A97B /* Pods-GeoNetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoNetTests/Pods-GeoNetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C32D6D3BAD2F0CFA0758461 /* Pods-GeoNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoNet/Pods-GeoNet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				B912DE2E1DDEC49A004B5A71 /* AppDelegate.swift */,
+				4AB6A4081DF411E600E1073C /* Appearance.swift */,
 				B912DE3F1DDEC7C7004B5A71 /* GeoNetViewControllers.swift */,
 				B96909B01DE2BD8B00896042 /* UserDefaults.swift */,
 				B912DE301DDEC4EC004B5A71 /* Info.plist */,
@@ -185,6 +190,7 @@
 				B96909AE1DE0FDE900896042 /* IntensitiesViewController.swift */,
 				B96909A71DDF05AE00896042 /* QuakeInfoTableViewCell.swift */,
 				B96909B41DE3CE2B00896042 /* QuakeLocationView.swift */,
+				4AB6A4061DF39C6500E1073C /* QuakeMapViewController.swift */,
 				B912DE371DDEC625004B5A71 /* QuakesViewController.swift */,
 			);
 			path = Quakes;
@@ -430,6 +436,7 @@
 			files = (
 				B96909B51DE3CE2B00896042 /* QuakeLocationView.swift in Sources */,
 				B96909A41DDEE57100896042 /* APIModels.swift in Sources */,
+				4AB6A4071DF39C6500E1073C /* QuakeMapViewController.swift in Sources */,
 				B912DE3E1DDEC7B6004B5A71 /* ReportShakingViewController.swift in Sources */,
 				B912DE381DDEC625004B5A71 /* QuakesViewController.swift in Sources */,
 				B96909A81DDF05AE00896042 /* QuakeInfoTableViewCell.swift in Sources */,
@@ -438,6 +445,7 @@
 				B912DE461DDEC84A004B5A71 /* VolcanoesViewController.swift in Sources */,
 				B912DE421DDEC81E004B5A71 /* NewsViewController.swift in Sources */,
 				B90BB5AD1DDEDAFA005A6132 /* GeoNetAPI.swift in Sources */,
+				4AB6A4091DF411E600E1073C /* Appearance.swift in Sources */,
 				B96909AF1DE0FDE900896042 /* IntensitiesViewController.swift in Sources */,
 				B912DE2F1DDEC49A004B5A71 /* AppDelegate.swift in Sources */,
 				B96909B11DE2BD8B00896042 /* UserDefaults.swift in Sources */,

@@ -36,6 +36,8 @@ class QuakesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
+
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(loadQuakes), for: .valueChanged)
 
@@ -74,6 +76,10 @@ extension QuakesViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! QuakeInfoTableViewCell
         cell.update(with: quakes[indexPath.row])
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController?.pushViewController(QuakeMapViewController(quake: quakes[indexPath.row]), animated: true)
     }
 
 }
