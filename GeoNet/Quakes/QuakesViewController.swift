@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GeoNetAPI
 
 class QuakesViewController: UITableViewController {
 
@@ -110,7 +111,7 @@ private extension QuakesViewController {
 
         navigationItem.title = "Quake (\(intensity.description)+)"
 
-        loadQuakesTask = APISession().quakes(with: mmi) { [weak self] result in
+        loadQuakesTask = URLSession.API.quakes(with: mmi) { [weak self] result in
             guard let `self` = self else { return }
             self.refreshControl?.endRefreshing()
             switch result {

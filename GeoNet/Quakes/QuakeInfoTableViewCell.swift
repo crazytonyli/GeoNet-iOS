@@ -8,6 +8,7 @@
 
 import UIKit
 import FormatterKit
+import GeoNetAPI
 
 private enum QuakeAttribute: String {
 
@@ -145,7 +146,7 @@ extension QuakeInfoView {
         let nameLabel = UILabel()
         nameLabel.font = .systemFont(ofSize: 12)
         nameLabel.text = attribute.rawValue
-        nameLabel.textColor = .lightGray
+        nameLabel.textColor = .darkGray
         view.addSubview(nameLabel)
         let valueLabel = UILabel()
         valueLabel.font = .systemFont(ofSize: 12)

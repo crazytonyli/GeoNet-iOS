@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GeoNetAPI
 
 private class IntensityCell: UITableViewCell {
 

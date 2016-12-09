@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import GeoNetAPI
 
 private class VolcanoCell: UITableViewCell {
 
@@ -117,7 +118,7 @@ class VolcanoesViewController: UITableViewController {
 private extension VolcanoesViewController {
 
     @objc func loadVolcanoes() {
-        loadVolcanoesTask =  APISession().volcanoes { [weak self] result in
+        loadVolcanoesTask =  URLSession.API.volcanoes { [weak self] result in
             guard let `self` = self else { return }
             self.refreshControl?.endRefreshing()
             switch result {

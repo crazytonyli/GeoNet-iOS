@@ -10,8 +10,15 @@
 		16DB15006D48BC506B9AEE8D /* Pods_GeoNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E170CF2A7645D3D156A42C6E /* Pods_GeoNet.framework */; };
 		4AB6A4071DF39C6500E1073C /* QuakeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB6A4061DF39C6500E1073C /* QuakeMapViewController.swift */; };
 		4AB6A4091DF411E600E1073C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB6A4081DF411E600E1073C /* Appearance.swift */; };
+		4AC262861DFB6A790095D279 /* GeoNetAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC262841DFB6A790095D279 /* GeoNetAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AC262891DFB6A790095D279 /* GeoNetAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC262821DFB6A790095D279 /* GeoNetAPI.framework */; };
+		4AC2628A1DFB6A790095D279 /* GeoNetAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC262821DFB6A790095D279 /* GeoNetAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4AC262911DFB6B010095D279 /* APIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC2628F1DFB6B010095D279 /* APIModels.swift */; };
+		4AC262921DFB6B010095D279 /* GeoNetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC262901DFB6B010095D279 /* GeoNetAPI.swift */; };
+		4AC262961DFB6B6E0095D279 /* APIModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC262951DFB6B6E0095D279 /* APIModelExtension.swift */; };
+		4AC262981DFB6C980095D279 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC262971DFB6C980095D279 /* URLSessionExtension.swift */; };
+		5E4E742A9C52862F77361CF3 /* Pods_GeoNetAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C6BF6A1DAE5542222C711D /* Pods_GeoNetAPI.framework */; };
 		76C773B238E8789A6D634ED2 /* Pods_GeoNetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1036B3C02B300384AF45F7A7 /* Pods_GeoNetTests.framework */; };
-		B90BB5AD1DDEDAFA005A6132 /* GeoNetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90BB5AC1DDEDAFA005A6132 /* GeoNetAPI.swift */; };
 		B912DE151DDEC461004B5A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B912DE141DDEC461004B5A71 /* Assets.xcassets */; };
 		B912DE181DDEC461004B5A71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B912DE161DDEC461004B5A71 /* LaunchScreen.storyboard */; };
 		B912DE231DDEC461004B5A71 /* GeoNetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE221DDEC461004B5A71 /* GeoNetTests.swift */; };
@@ -22,7 +29,6 @@
 		B912DE421DDEC81E004B5A71 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE411DDEC81E004B5A71 /* NewsViewController.swift */; };
 		B912DE441DDEC832004B5A71 /* ShakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE431DDEC832004B5A71 /* ShakingViewController.swift */; };
 		B912DE461DDEC84A004B5A71 /* VolcanoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE451DDEC84A004B5A71 /* VolcanoesViewController.swift */; };
-		B96909A41DDEE57100896042 /* APIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909A31DDEE57100896042 /* APIModels.swift */; };
 		B96909A81DDF05AE00896042 /* QuakeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909A71DDF05AE00896042 /* QuakeInfoTableViewCell.swift */; };
 		B96909AB1DDF0B4700896042 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909AA1DDF0B4700896042 /* UIColorExtension.swift */; };
 		B96909AF1DE0FDE900896042 /* IntensitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909AE1DE0FDE900896042 /* IntensitiesViewController.swift */; };
@@ -31,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4AC262871DFB6A790095D279 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B912DE001DDEC461004B5A71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AC262811DFB6A790095D279;
+			remoteInfo = GeoNetAPI;
+		};
 		B912DE1F1DDEC461004B5A71 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B912DE001DDEC461004B5A71 /* Project object */;
@@ -40,15 +53,38 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4AC2628E1DFB6A790095D279 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4AC2628A1DFB6A790095D279 /* GeoNetAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		031E98CA88D73773EE96D67A /* Pods-GeoNetAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNetAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoNetAPI/Pods-GeoNetAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		1036B3C02B300384AF45F7A7 /* Pods_GeoNetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoNetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43CBD70D30A5989BD765457C /* Pods-GeoNetAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNetAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoNetAPI/Pods-GeoNetAPI.release.xcconfig"; sourceTree = "<group>"; };
 		4A78E3117C27F4795FEA6113 /* Pods-GeoNetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoNetTests/Pods-GeoNetTests.release.xcconfig"; sourceTree = "<group>"; };
 		4AB6A4061DF39C6500E1073C /* QuakeMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeMapViewController.swift; sourceTree = "<group>"; };
 		4AB6A4081DF411E600E1073C /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		4AC262821DFB6A790095D279 /* GeoNetAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeoNetAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AC262841DFB6A790095D279 /* GeoNetAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoNetAPI.h; sourceTree = "<group>"; };
+		4AC262851DFB6A790095D279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AC2628F1DFB6B010095D279 /* APIModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModels.swift; sourceTree = "<group>"; };
+		4AC262901DFB6B010095D279 /* GeoNetAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoNetAPI.swift; sourceTree = "<group>"; };
+		4AC262951DFB6B6E0095D279 /* APIModelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModelExtension.swift; sourceTree = "<group>"; };
+		4AC262971DFB6C980095D279 /* URLSessionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
 		59A240143E0B3FC95ED295A5 /* Pods-GeoNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNet.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoNet/Pods-GeoNet.release.xcconfig"; sourceTree = "<group>"; };
 		65C9323A37EE874956A3A97B /* Pods-GeoNetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoNetTests/Pods-GeoNetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C32D6D3BAD2F0CFA0758461 /* Pods-GeoNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoNet/Pods-GeoNet.debug.xcconfig"; sourceTree = "<group>"; };
-		B90BB5AC1DDEDAFA005A6132 /* GeoNetAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoNetAPI.swift; sourceTree = "<group>"; };
+		B1C6BF6A1DAE5542222C711D /* Pods_GeoNetAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoNetAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B912DE081DDEC461004B5A71 /* GeoNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B912DE141DDEC461004B5A71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B912DE171DDEC461004B5A71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,7 +99,6 @@
 		B912DE411DDEC81E004B5A71 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		B912DE431DDEC832004B5A71 /* ShakingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakingViewController.swift; sourceTree = "<group>"; };
 		B912DE451DDEC84A004B5A71 /* VolcanoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolcanoesViewController.swift; sourceTree = "<group>"; };
-		B96909A31DDEE57100896042 /* APIModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModels.swift; sourceTree = "<group>"; };
 		B96909A71DDF05AE00896042 /* QuakeInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeInfoTableViewCell.swift; sourceTree = "<group>"; };
 		B96909AA1DDF0B4700896042 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B96909AE1DE0FDE900896042 /* IntensitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntensitiesViewController.swift; sourceTree = "<group>"; };
@@ -73,11 +108,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4AC2627E1DFB6A790095D279 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E4E742A9C52862F77361CF3 /* Pods_GeoNetAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B912DE051DDEC461004B5A71 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				16DB15006D48BC506B9AEE8D /* Pods_GeoNet.framework in Frameworks */,
+				4AC262891DFB6A790095D279 /* GeoNetAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,22 +136,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AC262831DFB6A790095D279 /* GeoNetAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4AC262841DFB6A790095D279 /* GeoNetAPI.h */,
+				4AC2628F1DFB6B010095D279 /* APIModels.swift */,
+				4AC262901DFB6B010095D279 /* GeoNetAPI.swift */,
+				4AC262851DFB6A790095D279 /* Info.plist */,
+			);
+			path = GeoNetAPI;
+			sourceTree = "<group>";
+		};
 		8DC1A9184A5E2821BC7B7C9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				E170CF2A7645D3D156A42C6E /* Pods_GeoNet.framework */,
 				1036B3C02B300384AF45F7A7 /* Pods_GeoNetTests.framework */,
+				B1C6BF6A1DAE5542222C711D /* Pods_GeoNetAPI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B90BB5AB1DDEDAF0005A6132 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				B96909A31DDEE57100896042 /* APIModels.swift */,
-				B90BB5AC1DDEDAFA005A6132 /* GeoNetAPI.swift */,
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		B912DDFF1DDEC461004B5A71 = {
@@ -115,6 +162,7 @@
 			children = (
 				B912DE0A1DDEC461004B5A71 /* GeoNet */,
 				B912DE211DDEC461004B5A71 /* GeoNetTests */,
+				4AC262831DFB6A790095D279 /* GeoNetAPI */,
 				B912DE091DDEC461004B5A71 /* Products */,
 				DA7A549888E8A02228C8AACB /* Pods */,
 				8DC1A9184A5E2821BC7B7C9F /* Frameworks */,
@@ -126,6 +174,7 @@
 			children = (
 				B912DE081DDEC461004B5A71 /* GeoNet.app */,
 				B912DE1E1DDEC461004B5A71 /* GeoNetTests.xctest */,
+				4AC262821DFB6A790095D279 /* GeoNetAPI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				B912DE141DDEC461004B5A71 /* Assets.xcassets */,
-				B90BB5AB1DDEDAF0005A6132 /* API */,
 				B912DE2D1DDEC49A004B5A71 /* App */,
 				B96909A91DDF0B1E00896042 /* Extensions */,
 				B912DE321DDEC60A004B5A71 /* Felt */,
@@ -216,6 +264,8 @@
 			isa = PBXGroup;
 			children = (
 				B96909AA1DDF0B4700896042 /* UIColorExtension.swift */,
+				4AC262951DFB6B6E0095D279 /* APIModelExtension.swift */,
+				4AC262971DFB6C980095D279 /* URLSessionExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,13 +277,46 @@
 				59A240143E0B3FC95ED295A5 /* Pods-GeoNet.release.xcconfig */,
 				65C9323A37EE874956A3A97B /* Pods-GeoNetTests.debug.xcconfig */,
 				4A78E3117C27F4795FEA6113 /* Pods-GeoNetTests.release.xcconfig */,
+				031E98CA88D73773EE96D67A /* Pods-GeoNetAPI.debug.xcconfig */,
+				43CBD70D30A5989BD765457C /* Pods-GeoNetAPI.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		4AC2627F1DFB6A790095D279 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC262861DFB6A790095D279 /* GeoNetAPI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		4AC262811DFB6A790095D279 /* GeoNetAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AC2628D1DFB6A790095D279 /* Build configuration list for PBXNativeTarget "GeoNetAPI" */;
+			buildPhases = (
+				04FBE35FFE2FA01C1D2E1D9D /* [CP] Check Pods Manifest.lock */,
+				4AC2627D1DFB6A790095D279 /* Sources */,
+				4AC2627E1DFB6A790095D279 /* Frameworks */,
+				4AC2627F1DFB6A790095D279 /* Headers */,
+				4AC262801DFB6A790095D279 /* Resources */,
+				B00A791CA25B7BC84CB5AA3D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoNetAPI;
+			productName = GeoNetAPI;
+			productReference = 4AC262821DFB6A790095D279 /* GeoNetAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		B912DE071DDEC461004B5A71 /* GeoNet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B912DE271DDEC461004B5A71 /* Build configuration list for PBXNativeTarget "GeoNet" */;
@@ -244,10 +327,12 @@
 				B912DE061DDEC461004B5A71 /* Resources */,
 				81A6A79862602B749A585F26 /* [CP] Embed Pods Frameworks */,
 				A92DDE865AB9BCB4996ECAA1 /* [CP] Copy Pods Resources */,
+				4AC2628E1DFB6A790095D279 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4AC262881DFB6A790095D279 /* PBXTargetDependency */,
 			);
 			name = GeoNet;
 			productName = GeoNet;
@@ -285,6 +370,12 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Tony Li";
 				TargetAttributes = {
+					4AC262811DFB6A790095D279 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5W5KKWP2K5;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
 					B912DE071DDEC461004B5A71 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 5W5KKWP2K5;
@@ -313,11 +404,19 @@
 			targets = (
 				B912DE071DDEC461004B5A71 /* GeoNet */,
 				B912DE1D1DDEC461004B5A71 /* GeoNetTests */,
+				4AC262811DFB6A790095D279 /* GeoNetAPI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4AC262801DFB6A790095D279 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B912DE061DDEC461004B5A71 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,6 +436,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		04FBE35FFE2FA01C1D2E1D9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		81A6A79862602B749A585F26 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -397,6 +511,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoNetTests/Pods-GeoNetTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B00A791CA25B7BC84CB5AA3D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoNetAPI/Pods-GeoNetAPI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C26EA327260348EDADBE6B16 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -430,21 +559,30 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4AC2627D1DFB6A790095D279 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC262921DFB6B010095D279 /* GeoNetAPI.swift in Sources */,
+				4AC262911DFB6B010095D279 /* APIModels.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B912DE041DDEC461004B5A71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B96909B51DE3CE2B00896042 /* QuakeLocationView.swift in Sources */,
-				B96909A41DDEE57100896042 /* APIModels.swift in Sources */,
 				4AB6A4071DF39C6500E1073C /* QuakeMapViewController.swift in Sources */,
 				B912DE3E1DDEC7B6004B5A71 /* ReportShakingViewController.swift in Sources */,
 				B912DE381DDEC625004B5A71 /* QuakesViewController.swift in Sources */,
 				B96909A81DDF05AE00896042 /* QuakeInfoTableViewCell.swift in Sources */,
 				B912DE441DDEC832004B5A71 /* ShakingViewController.swift in Sources */,
+				4AC262961DFB6B6E0095D279 /* APIModelExtension.swift in Sources */,
 				B912DE401DDEC7C7004B5A71 /* GeoNetViewControllers.swift in Sources */,
+				4AC262981DFB6C980095D279 /* URLSessionExtension.swift in Sources */,
 				B912DE461DDEC84A004B5A71 /* VolcanoesViewController.swift in Sources */,
 				B912DE421DDEC81E004B5A71 /* NewsViewController.swift in Sources */,
-				B90BB5AD1DDEDAFA005A6132 /* GeoNetAPI.swift in Sources */,
 				4AB6A4091DF411E600E1073C /* Appearance.swift in Sources */,
 				B96909AF1DE0FDE900896042 /* IntensitiesViewController.swift in Sources */,
 				B912DE2F1DDEC49A004B5A71 /* AppDelegate.swift in Sources */,
@@ -464,6 +602,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4AC262881DFB6A790095D279 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AC262811DFB6A790095D279 /* GeoNetAPI */;
+			targetProxy = 4AC262871DFB6A790095D279 /* PBXContainerItemProxy */;
+		};
 		B912DE201DDEC461004B5A71 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B912DE071DDEC461004B5A71 /* GeoNet */;
@@ -484,6 +627,57 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4AC2628B1DFB6A790095D279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 031E98CA88D73773EE96D67A /* Pods-GeoNetAPI.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5W5KKWP2K5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GeoNetAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = li.crazytony.GeoNetAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4AC2628C1DFB6A790095D279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43CBD70D30A5989BD765457C /* Pods-GeoNetAPI.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5W5KKWP2K5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GeoNetAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = li.crazytony.GeoNetAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		B912DE251DDEC461004B5A71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -646,6 +840,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4AC2628D1DFB6A790095D279 /* Build configuration list for PBXNativeTarget "GeoNetAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AC2628B1DFB6A790095D279 /* Debug */,
+				4AC2628C1DFB6A790095D279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B912DE031DDEC461004B5A71 /* Build configuration list for PBXProject "GeoNet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -10,17 +10,6 @@ import Foundation
 import Result
 import SwiftyJSON
 
-private var _APISession: URLSession?
-
-func APISession() -> URLSession {
-    if _APISession == nil {
-        _APISession = URLSession(configuration: .default, delegate: nil, delegateQueue: .main)
-        _APISession?.configuration.httpAdditionalHeaders
-            = ["Accept": "application/vnd.geo+json;version=2"]
-    }
-    return _APISession!
-}
-
 func APIRequest(path: String, query: [String: CustomStringConvertible]? = nil) -> URLRequest {
     let urlComp = NSURLComponents(string: "https://api.geonet.org.nz")!
     urlComp.path = path
@@ -30,7 +19,7 @@ func APIRequest(path: String, query: [String: CustomStringConvertible]? = nil) -
     return URLRequest(url: urlComp.url!)
 }
 
-enum GeoNetAPIError: Swift.Error {
+public enum GeoNetAPIError: Swift.Error {
 
     case HTTP(NSError)
 
@@ -66,13 +55,13 @@ extension URLSession {
 
 extension URLSession {
 
-    @discardableResult func quakes(with mmi: QuakeMMI, completion: @escaping (Result<[Quake], GeoNetAPIError>) -> Void) -> URLSessionTask {
+    @discardableResult public func quakes(with mmi: QuakeMMI, completion: @escaping (Result<[Quake], GeoNetAPIError>) -> Void) -> URLSessionTask {
         return GeoJSON(request: APIRequest(path: "/quake", query: ["MMI": mmi.rawValue])) { result in
             completion(result.map { $0["features"].array?.flatMap { Quake(feature: $0) } ?? [] })
         }
     }
 
-    @discardableResult func volcanoes(completion: @escaping (Result<[Volcano], GeoNetAPIError>) -> Void) -> URLSessionTask {
+    @discardableResult public func volcanoes(completion: @escaping (Result<[Volcano], GeoNetAPIError>) -> Void) -> URLSessionTask {
         return GeoJSON(request: APIRequest(path: "/volcano/val")) { result in
             completion(result.map { $0["features"].array?.flatMap { Volcano(feature: $0) } ?? [] })
         }

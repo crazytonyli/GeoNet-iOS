@@ -16,11 +16,13 @@
 		13AC0D4EB6A3398ED810386188353E56 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 915BC8F885F8362A57FB86C8A50CB6E5 /* ja.lproj */; };
 		1A14FE2A4C6AD2F9A28F498EA95A0E98 /* ro.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B6EF93DBF16CA58EF27E184865E9F8E6 /* ro.lproj */; };
 		1C02DF47D0C2A10FAB280254A1DD3A4C /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = BD585FD70BE20E4BE66C69132234202E /* NSDate+InternetDateTime.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1D1FC8E1C8DF2A4248305CDFB5DC1566 /* Pods-GeoNetAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C07521EA00256DA341DA16E12E35F /* Pods-GeoNetAPI-dummy.m */; };
 		223030FB2159E0D0A2D4D9B98301A68D /* ms.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2E4DA5B7E1D31D15D13A8735A799F25E /* ms.lproj */; };
 		227519E2EDE788D0885DF56A11A8D5BC /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B2B490EC53946633EBEF5F6532F6FF90 /* tr.lproj */; };
 		22A0C4823BBB20CBE312F56E664EFE50 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9BB6E576A5E8C94C9D0E524974B3113A /* pt.lproj */; };
 		23B528A10BE02A6393D4718961A4EA44 /* uk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D6F1550C4ADF15DF05E6132461DAE31E /* uk.lproj */; };
 		2908B210925DB7B5F2DA111FEEE03ECC /* id.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5024C3E8E7B626C5D552EBE1CD1BFF7A /* id.lproj */; };
+		2A8D43444D8830C285E22E9712615AB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		2DC84631B448654868FC6696929B45AE /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 61EF0852EA15E267D50253ED68029974 /* de.lproj */; };
 		316A7B159D6908F016E51F3292EF63C5 /* th.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 003AF2822676B9E35EA2CFAB688DACC2 /* th.lproj */; };
 		364B8C3BB7D267451D7F423419EFC8F5 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0BF3FE412FBEB423C45859F7BD4CBBAF /* fr.lproj */; };
@@ -31,13 +33,13 @@
 		409C8EC50D77F689966D190139A8ECAB /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8DCFBD761E675DE44ABE49F754F968 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44D025D166642614335415C2CFAE9B02 /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDE64955462AE0867BEA18EB7D4539 /* MWFeedInfo.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		4BFEC240EC36980C6F1644189ADA0E9A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C2806336B74E787C5E43FAD7733C45 /* Result.swift */; };
-		5003596DE5F35762A2A01F369AAD1DD6 /* Pods-GeoNet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C872D2839D2808A99A55091A785C3A /* Pods-GeoNet-dummy.m */; };
+		5003596DE5F35762A2A01F369AAD1DD6 /* Pods-GeoNet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8351B2FF7237987004D42984A4B5A9 /* Pods-GeoNet-dummy.m */; };
 		531C799732CE8086CF08E22ADA91AB0B /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3B33BD79195C06D6F2BA5119ABD17219 /* zh-Hans.lproj */; };
 		540C649A9BDD57E43F115638AB900904 /* Result-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8C919B1D1672A0B91AE4DD531FE02B /* Result-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54E56ED5487A9EA1CC07837B60539ADE /* MWFeedParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAD1169707F77D374BEFC35E2A361C /* MWFeedParser-dummy.m */; };
 		5C9957F7C228081C22E515C2F38F3049 /* NSString+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F41C04F76B8B955E6A99B379F7E06E6 /* NSString+HTML.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5EC1F0580ACF4C4CAD3C23D5C168DF82 /* MWFeedParser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8363417D0EC4935E4FBE6864505DB633 /* MWFeedParser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6347B1F121ED0830AAC6BBEE1DB42CFB /* Pods-GeoNetTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8164F40139384E3A1D170D3D7E1156 /* Pods-GeoNetTests-dummy.m */; };
+		6347B1F121ED0830AAC6BBEE1DB42CFB /* Pods-GeoNetTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 446D3269056760B56E9E9745F47DEBF6 /* Pods-GeoNetTests-dummy.m */; };
 		66ECA4FBD7C0A6BD48D53D822C9B6DFE /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 38F8ED618AA3CB9E359EC9F6A5CB1FFE /* hu.lproj */; };
 		72FD07B624628023221A8A71D892C6D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		7499AF6D4890E5BDBAB1AB9DE6D8E384 /* he.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7496C00C133B1035B9612873A6977A1F /* he.lproj */; };
@@ -59,11 +61,12 @@
 		B476751F51FACA7D3BAAFA5E889E3145 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F3AE215B51AA934ED29DE1D0B24469 /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		BB473283F2761CE7C27C2AE7082537CF /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9B14F0610CE9187C39F1B4101413DD6B /* es.lproj */; };
 		BF9B4994AEB554487B53D65351E094CE /* FormatterKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76A4021F15F191166E4CE81DE21CEFB4 /* FormatterKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB0460C124C7B8BB5EBA423125BC459D /* Pods-GeoNetAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 817C25229D684CEF983119D166531A35 /* Pods-GeoNetAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D77D16A52E4D2685D2AE088741238FB4 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 569E8ED528031DD2D56CA67BE07F42CF /* SwiftyJSON-dummy.m */; };
 		DA0D8084411AF924695BE352D8AE424C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		DA0F461F5565BD80EE91074F0E8C1E98 /* el.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6A66B035A68EC93BBBE8F4A9966108E3 /* el.lproj */; };
-		DB3CEB610CB8E8AA04A154D91CA8A0B7 /* Pods-GeoNet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D21035EFEBDF09F823FC38F4C8C510 /* Pods-GeoNet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF26833F02EF7EB5D4299196C6B279AC /* Pods-GeoNetTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81FBAFA2B3209F93D57A5D6FDF198F26 /* Pods-GeoNetTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB3CEB610CB8E8AA04A154D91CA8A0B7 /* Pods-GeoNet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C267843468FE3913B6702E267378D5 /* Pods-GeoNet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF26833F02EF7EB5D4299196C6B279AC /* Pods-GeoNetTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 690EE03AD89E4B9C4648CE889F6EA24E /* Pods-GeoNetTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1A79ADA7762C66EF86807A1880B1BA3 /* nn.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1285E51EAA1D598F48E4E1E5A64D521B /* nn.lproj */; };
 		E59A0702E27D878BED209A9A1A80D252 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD00D81D36BFF26345EF7AFA9FD0B1B /* ResultProtocol.swift */; };
 		E6659868B181399B323836495553276D /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A83A95441C6C0300D426A0A4A1BAC /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -77,6 +80,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0908F6B93E51D3EF64D2814134B3081E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 912D1F09221172E8435C5F0BC7E41CC9;
+			remoteInfo = SwiftyJSON;
+		};
 		1F4A1AE985FB8C0F1BDAED4A880696E8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -105,71 +115,88 @@
 			remoteGlobalIDString = 912D1F09221172E8435C5F0BC7E41CC9;
 			remoteInfo = SwiftyJSON;
 		};
+		8131AB2E351850A0E987302A07945C53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFD0EA3A2166E3C59599FDCBA28A9C7;
+			remoteInfo = Result;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		003AF2822676B9E35EA2CFAB688DACC2 /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = th.lproj; path = Localizations/th.lproj; sourceTree = "<group>"; };
-		02B32C0C6C961D5EA5D97B735C6CB3F2 /* Pods-GeoNetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GeoNetTests.release.xcconfig"; sourceTree = "<group>"; };
 		02DDB91001D49C2F44D10E371D927585 /* pt_BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt_BR.lproj; path = Localizations/pt_BR.lproj; sourceTree = "<group>"; };
-		07961FBC9A902C617041FA29B46D2E98 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EB8DDBCB2B2F9707EC57FD45776802 /* Pods-GeoNet-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GeoNet-acknowledgements.markdown"; sourceTree = "<group>"; };
 		083C8EDCFBDCD775FC7152BDAFA43D33 /* MWFeedItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWFeedItem.h; path = Classes/MWFeedItem.h; sourceTree = "<group>"; };
+		08B13FEBF0BEB8B2A105922C6711143A /* Pods-GeoNetTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GeoNetTests-frameworks.sh"; sourceTree = "<group>"; };
 		09B293BC1501898EAE46D6D00350D75F /* TTTTimeIntervalFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTTimeIntervalFormatter.m; path = FormatterKit/TTTTimeIntervalFormatter.m; sourceTree = "<group>"; };
 		0BF3FE412FBEB423C45859F7BD4CBBAF /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = Localizations/fr.lproj; sourceTree = "<group>"; };
 		0C8C919B1D1672A0B91AE4DD531FE02B /* Result-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Result-umbrella.h"; sourceTree = "<group>"; };
 		0CAF21D7EC2EE855CD2FAE49F3CA946F /* MWFeedItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWFeedItem.m; path = Classes/MWFeedItem.m; sourceTree = "<group>"; };
 		0D6989A9C5C25AB2716B8F6A18A946BD /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = cs.lproj; path = Localizations/cs.lproj; sourceTree = "<group>"; };
-		10748A17F31603B247990F686C06B48A /* FormatterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FormatterKit.framework; path = FormatterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F8351B2FF7237987004D42984A4B5A9 /* Pods-GeoNet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GeoNet-dummy.m"; sourceTree = "<group>"; };
+		1061CAE3791391D57C075DA7DF089358 /* Pods-GeoNetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GeoNetTests.release.xcconfig"; sourceTree = "<group>"; };
+		10B191B17DC05F963A6C684AD1417B4A /* Pods-GeoNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GeoNet.debug.xcconfig"; sourceTree = "<group>"; };
 		1285E51EAA1D598F48E4E1E5A64D521B /* nn.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nn.lproj; path = Localizations/nn.lproj; sourceTree = "<group>"; };
 		131562A73AA536F39CF656C0F1D336DD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15231EAED2D1E96BFAB7C9F7DF049E99 /* Result-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Result-dummy.m"; sourceTree = "<group>"; };
-		19D84CB49FB2C2D92D2D0DE49AB3CA82 /* Pods-GeoNetTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GeoNetTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1D1B3F723342AD902DB49EF4D48C62E5 /* Pods-GeoNet-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GeoNet-resources.sh"; sourceTree = "<group>"; };
+		1E730941BDD29E2C6E1944A2624BB509 /* Pods-GeoNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GeoNet.release.xcconfig"; sourceTree = "<group>"; };
 		1F99A71B107DA843DC7064BD479380D5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2061F95B225C161195A7E925E9D6C6AD /* Pods-GeoNet-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GeoNet-acknowledgements.markdown"; sourceTree = "<group>"; };
-		28C46289C20E2D4D8228C19F19FD2163 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2286F5312132BB8C30EEA5C53FCDE2CE /* Pods-GeoNetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GeoNetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		27FB51D6BA978DBDE5646CBC946EEAB8 /* Pods-GeoNetTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GeoNetTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2E4DA5B7E1D31D15D13A8735A799F25E /* ms.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ms.lproj; path = Localizations/ms.lproj; sourceTree = "<group>"; };
 		352215FAA76BB7A2D1F7616CC8AA6EB5 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = Localizations/ru.lproj; sourceTree = "<group>"; };
-		36530C900175BDA011651AC96FDEF4DC /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Result.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		370D770AEA758C885E02CD7FBFCB506B /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+InternetDateTime.h"; path = "Classes/NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		370FDD98FA9ACCC5FAC728520925FB7A /* Pods_GeoNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GeoNet.framework; path = "Pods-GeoNet.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E43EBCDBDB1482EB4B1C7CD8C6B49F /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ko.lproj; path = Localizations/ko.lproj; sourceTree = "<group>"; };
 		38F8ED618AA3CB9E359EC9F6A5CB1FFE /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hu.lproj; path = Localizations/hu.lproj; sourceTree = "<group>"; };
-		39666F1434370820513D6EA6F48B4FBE /* MWFeedParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MWFeedParser.framework; path = MWFeedParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B33BD79195C06D6F2BA5119ABD17219 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Localizations/zh-Hans.lproj"; sourceTree = "<group>"; };
 		3CD00D81D36BFF26345EF7AFA9FD0B1B /* ResultProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResultProtocol.swift; path = Result/ResultProtocol.swift; sourceTree = "<group>"; };
 		3DCE30F90C280C2B9A24037E241BC464 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = vi.lproj; path = Localizations/vi.lproj; sourceTree = "<group>"; };
 		3FFDE64955462AE0867BEA18EB7D4539 /* MWFeedInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWFeedInfo.m; path = Classes/MWFeedInfo.m; sourceTree = "<group>"; };
+		41507148566ACB9AD2292166F47D1B6F /* Pods-GeoNetAPI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GeoNetAPI-acknowledgements.plist"; sourceTree = "<group>"; };
+		41EA26BA59A53FF3C299CC4A7709A2A5 /* Pods_GeoNetAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GeoNetAPI.framework; path = "Pods-GeoNetAPI.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		446D3269056760B56E9E9745F47DEBF6 /* Pods-GeoNetTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GeoNetTests-dummy.m"; sourceTree = "<group>"; };
 		4476B16083E43FFA1D7EB40A51770E35 /* FormatterKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FormatterKit.modulemap; sourceTree = "<group>"; };
 		46195ABB3DD81BD2CAB76203C6E03A46 /* Result.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Result.modulemap; sourceTree = "<group>"; };
 		479CC431700C2F027192E57970AFECFA /* Result.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Result.xcconfig; sourceTree = "<group>"; };
 		493568449557BD684AA96F53C949B147 /* MWFeedParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWFeedParser.h; path = Classes/MWFeedParser.h; sourceTree = "<group>"; };
+		49E184C8083F4E44AD5FBF3B01F02304 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B370929939CE350D3ACB85F3D2D6988 /* FormatterKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FormatterKit.xcconfig; sourceTree = "<group>"; };
-		4B4BA3A3259DAFA10D3D1D0FC4261AEF /* Pods-GeoNetTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GeoNetTests-frameworks.sh"; sourceTree = "<group>"; };
 		4C2805A678F25CBBA76561E7AF42C2C8 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "Localizations/zh-Hant.lproj"; sourceTree = "<group>"; };
 		4E66072463656D3590CB3A8B990EC341 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Localizations/en.lproj; sourceTree = "<group>"; };
+		4EA5050F53E55719A4469CB8C684119E /* Pods-GeoNetAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GeoNetAPI.release.xcconfig"; sourceTree = "<group>"; };
+		4EAD297C1D1D47AA88EF4CBBD02244A0 /* Pods-GeoNet-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GeoNet-frameworks.sh"; sourceTree = "<group>"; };
 		4EEAD1169707F77D374BEFC35E2A361C /* MWFeedParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MWFeedParser-dummy.m"; sourceTree = "<group>"; };
+		4F2749C66FAC737101AAC4AE3DAD7B67 /* MWFeedParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MWFeedParser.framework; path = MWFeedParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5024C3E8E7B626C5D552EBE1CD1BFF7A /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = id.lproj; path = Localizations/id.lproj; sourceTree = "<group>"; };
 		54C2806336B74E787C5E43FAD7733C45 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Result/Result.swift; sourceTree = "<group>"; };
 		569E8ED528031DD2D56CA67BE07F42CF /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		5AE6640B38ADE94397267528B018C2C7 /* Pods-GeoNetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GeoNetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B708A2F755F8E5A0CB98B0E8F5C6B93 /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ar.lproj; path = Localizations/ar.lproj; sourceTree = "<group>"; };
+		5D4EE7299DE0FAE3FD77F86E3BBF980D /* Pods-GeoNet-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GeoNet-acknowledgements.plist"; sourceTree = "<group>"; };
 		5F41C04F76B8B955E6A99B379F7E06E6 /* NSString+HTML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+HTML.h"; path = "Classes/NSString+HTML.h"; sourceTree = "<group>"; };
 		61EF0852EA15E267D50253ED68029974 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = Localizations/de.lproj; sourceTree = "<group>"; };
+		62E7FBCF4BB2499FCE84E1D2E9DB8A06 /* Pods_GeoNetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GeoNetTests.framework; path = "Pods-GeoNetTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		647C6D773935B582FA0B51796B673C05 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64F3AE215B51AA934ED29DE1D0B24469 /* NSString+HTML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+HTML.m"; path = "Classes/NSString+HTML.m"; sourceTree = "<group>"; };
-		6778A8786D3C91E2191A43CF89825E6D /* Pods-GeoNet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GeoNet.modulemap"; sourceTree = "<group>"; };
-		6A17B7F95D1EBF3B3AAF80D678EBF788 /* Pods-GeoNetTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GeoNetTests.modulemap"; sourceTree = "<group>"; };
+		690EE03AD89E4B9C4648CE889F6EA24E /* Pods-GeoNetTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GeoNetTests-umbrella.h"; sourceTree = "<group>"; };
 		6A66B035A68EC93BBBE8F4A9966108E3 /* el.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = el.lproj; path = Localizations/el.lproj; sourceTree = "<group>"; };
 		6A9B9CADA7C2E1F188EE1B723B9419E1 /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nb.lproj; path = Localizations/nb.lproj; sourceTree = "<group>"; };
-		7050DFBD35F9B5FDBCF2AEF7C354AB5D /* Pods-GeoNet-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GeoNet-acknowledgements.plist"; sourceTree = "<group>"; };
+		70C267843468FE3913B6702E267378D5 /* Pods-GeoNet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GeoNet-umbrella.h"; sourceTree = "<group>"; };
 		731676A15EBF4AC1130304FD5A0EF05B /* FormatterKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FormatterKit-prefix.pch"; sourceTree = "<group>"; };
 		7496C00C133B1035B9612873A6977A1F /* he.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = he.lproj; path = Localizations/he.lproj; sourceTree = "<group>"; };
 		7688C2D0F6187BEC65FAF99056DCCA69 /* ca.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ca.lproj; path = Localizations/ca.lproj; sourceTree = "<group>"; };
 		76A4021F15F191166E4CE81DE21CEFB4 /* FormatterKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FormatterKit-umbrella.h"; sourceTree = "<group>"; };
 		7F0C7606102634048441E4BE24FAE484 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		81FBAFA2B3209F93D57A5D6FDF198F26 /* Pods-GeoNetTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GeoNetTests-umbrella.h"; sourceTree = "<group>"; };
+		817C25229D684CEF983119D166531A35 /* Pods-GeoNetAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GeoNetAPI-umbrella.h"; sourceTree = "<group>"; };
+		830481EFB5F1D86741FFA6EB60CD17F5 /* Pods-GeoNetTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GeoNetTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8363417D0EC4935E4FBE6864505DB633 /* MWFeedParser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MWFeedParser-umbrella.h"; sourceTree = "<group>"; };
 		83CFCCF14C1FA081A3A87599F385BF83 /* MWFeedParser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MWFeedParser.xcconfig; sourceTree = "<group>"; };
-		857DA76CD57B523A8123FCDDA03FAA21 /* Pods-GeoNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GeoNet.release.xcconfig"; sourceTree = "<group>"; };
 		85EFAED11F26B2C0E4BC97251771604A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8721F0597E1C4D1ED605BAC966C11D29 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+HTML.h"; path = "Classes/GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		874A9480E07FC06DC3B3A182FC39BAF2 /* Pods-GeoNet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GeoNet.modulemap"; sourceTree = "<group>"; };
 		8A4A83A95441C6C0300D426A0A4A1BAC /* GTMNSString+HTML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSString+HTML.m"; path = "Classes/GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		8A84D0BA8283E7AA2F560B85F8DFA3A4 /* MWFeedInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWFeedInfo.h; path = Classes/MWFeedInfo.h; sourceTree = "<group>"; };
 		8C2FBA078BBD20C2B3A3333D1D48347E /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = Localizations/nl.lproj; sourceTree = "<group>"; };
@@ -177,19 +204,20 @@
 		915BC8F885F8362A57FB86C8A50CB6E5 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = Localizations/ja.lproj; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		947016E16192ACA113572EDA30A9BA45 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = Localizations/it.lproj; sourceTree = "<group>"; };
-		99C872D2839D2808A99A55091A785C3A /* Pods-GeoNet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GeoNet-dummy.m"; sourceTree = "<group>"; };
+		96B2E79BA368E973F0E08676A015187B /* Pods-GeoNetTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GeoNetTests.modulemap"; sourceTree = "<group>"; };
 		9B14F0610CE9187C39F1B4101413DD6B /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = Localizations/es.lproj; sourceTree = "<group>"; };
 		9BB6E576A5E8C94C9D0E524974B3113A /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = Localizations/pt.lproj; sourceTree = "<group>"; };
 		9CC1428847C43C363AB3236E4F4A662D /* MWFeedParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MWFeedParser-prefix.pch"; sourceTree = "<group>"; };
-		9CE5C718CE11BA405CE1DEDA8EB5140B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A82DFDC7AD8F44C1C3BAAF74225C4EC7 /* Pods-GeoNetTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GeoNetTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9F4C07521EA00256DA341DA16E12E35F /* Pods-GeoNetAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GeoNetAPI-dummy.m"; sourceTree = "<group>"; };
+		A6046A7D13A9781825ED700B603DB6E8 /* Pods-GeoNetAPI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GeoNetAPI-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A87CB166734464006BBA9BC88F116448 /* Result-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Result-prefix.pch"; sourceTree = "<group>"; };
 		AACE48D1E0CC954A0AAD1BCC518D969F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB633A78AEDBDCA03CCBB0ACE54C7804 /* Pods_GeoNetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GeoNetTests.framework; path = "Pods-GeoNetTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8DCFBD761E675DE44ABE49F754F968 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		AE7C938A66E16BEC415D0ACD937CCAE6 /* FormatterKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FormatterKit-dummy.m"; sourceTree = "<group>"; };
+		B097C2610A15A9FBCBCBBBD0E066C00A /* Pods-GeoNetAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GeoNetAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		B1014290E701995811834B87E4676C7E /* MWFeedParser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MWFeedParser.modulemap; sourceTree = "<group>"; };
 		B2B490EC53946633EBEF5F6532F6FF90 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = Localizations/tr.lproj; sourceTree = "<group>"; };
+		B2C1C0AD37362EB40E10834F6C5716CD /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Result.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B571BE9DAC16AC85B8AD75D915A6F7 /* TTTTimeIntervalFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTTimeIntervalFormatter.h; path = FormatterKit/TTTTimeIntervalFormatter.h; sourceTree = "<group>"; };
 		B6EF93DBF16CA58EF27E184865E9F8E6 /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ro.lproj; path = Localizations/ro.lproj; sourceTree = "<group>"; };
 		BB217EE92C5CF06B7A5E6422B8302EEF /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
@@ -198,17 +226,16 @@
 		C3618927F6CEB5555EEFEE266A9E8C8E /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pl.lproj; path = Localizations/pl.lproj; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CCAD39C17FE4C986C05382B4E8C1EFE9 /* MWFeedParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWFeedParser.m; path = Classes/MWFeedParser.m; sourceTree = "<group>"; };
-		CF40B8DF2111D080361D7E11B3C6F3E9 /* Pods_GeoNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GeoNet.framework; path = "Pods-GeoNet.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3906D369BC7998E0B66F5DA72203B36 /* Pods-GeoNet-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GeoNet-resources.sh"; sourceTree = "<group>"; };
+		D2D2AC15677AB47AE88DD187FE552C5B /* FormatterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FormatterKit.framework; path = FormatterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4367CC5AC02452B3A186721AB8CB7D6 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = da.lproj; path = Localizations/da.lproj; sourceTree = "<group>"; };
 		D6F1550C4ADF15DF05E6132461DAE31E /* uk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = uk.lproj; path = Localizations/uk.lproj; sourceTree = "<group>"; };
-		E14D8F350AD943707CC047F661235666 /* Pods-GeoNet-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GeoNet-frameworks.sh"; sourceTree = "<group>"; };
-		E5D21035EFEBDF09F823FC38F4C8C510 /* Pods-GeoNet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GeoNet-umbrella.h"; sourceTree = "<group>"; };
+		D9A5BBB1799F8619C053B3CAA207D508 /* Pods-GeoNetAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GeoNetAPI.modulemap"; sourceTree = "<group>"; };
+		DED4957DE9FBE89E4F98D20BB44A5643 /* Pods-GeoNetAPI-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GeoNetAPI-resources.sh"; sourceTree = "<group>"; };
 		EE1C3F598999851E6D4DE34B447E8061 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		EEDB5D134C849B3C1CA04B91C1D407EE /* Pods-GeoNetTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GeoNetTests-resources.sh"; sourceTree = "<group>"; };
+		F2EEF7E0F1A94576D68C292D6BECD0BA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA6DD9A4FBBE633FB078D5A84A5218F3 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		FA7FABB2C2EE72F839DE827285D2F4B0 /* Pods-GeoNetTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GeoNetTests-resources.sh"; sourceTree = "<group>"; };
-		FB88878D4CA71C37F7BE153971F05A23 /* Pods-GeoNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GeoNet.debug.xcconfig"; sourceTree = "<group>"; };
-		FF8164F40139384E3A1D170D3D7E1156 /* Pods-GeoNetTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GeoNetTests-dummy.m"; sourceTree = "<group>"; };
+		FFCE417EE24DD4E90D501B78010742B7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +268,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				72FD07B624628023221A8A71D892C6D3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B556F6ECDCE1B735EA8358ABB6324BA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A8D43444D8830C285E22E9712615AB1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +323,23 @@
 			path = "../Target Support Files/FormatterKit";
 			sourceTree = "<group>";
 		};
+		1DE1376858A680DB486B2B65FA78C439 /* Pods-GeoNetAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F2EEF7E0F1A94576D68C292D6BECD0BA /* Info.plist */,
+				D9A5BBB1799F8619C053B3CAA207D508 /* Pods-GeoNetAPI.modulemap */,
+				A6046A7D13A9781825ED700B603DB6E8 /* Pods-GeoNetAPI-acknowledgements.markdown */,
+				41507148566ACB9AD2292166F47D1B6F /* Pods-GeoNetAPI-acknowledgements.plist */,
+				9F4C07521EA00256DA341DA16E12E35F /* Pods-GeoNetAPI-dummy.m */,
+				DED4957DE9FBE89E4F98D20BB44A5643 /* Pods-GeoNetAPI-resources.sh */,
+				817C25229D684CEF983119D166531A35 /* Pods-GeoNetAPI-umbrella.h */,
+				B097C2610A15A9FBCBCBBBD0E066C00A /* Pods-GeoNetAPI.debug.xcconfig */,
+				4EA5050F53E55719A4469CB8C684119E /* Pods-GeoNetAPI.release.xcconfig */,
+			);
+			name = "Pods-GeoNetAPI";
+			path = "Target Support Files/Pods-GeoNetAPI";
+			sourceTree = "<group>";
+		};
 		29C40A4528F790EF1644BE02A62E9714 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,22 +354,22 @@
 			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
-		32A159819142B8A34F735A224B0D692B /* Pods-GeoNetTests */ = {
+		3B60B9EF1430CCDF6413B571ABFD173C /* Pods-GeoNet */ = {
 			isa = PBXGroup;
 			children = (
-				9CE5C718CE11BA405CE1DEDA8EB5140B /* Info.plist */,
-				6A17B7F95D1EBF3B3AAF80D678EBF788 /* Pods-GeoNetTests.modulemap */,
-				A82DFDC7AD8F44C1C3BAAF74225C4EC7 /* Pods-GeoNetTests-acknowledgements.markdown */,
-				19D84CB49FB2C2D92D2D0DE49AB3CA82 /* Pods-GeoNetTests-acknowledgements.plist */,
-				FF8164F40139384E3A1D170D3D7E1156 /* Pods-GeoNetTests-dummy.m */,
-				4B4BA3A3259DAFA10D3D1D0FC4261AEF /* Pods-GeoNetTests-frameworks.sh */,
-				FA7FABB2C2EE72F839DE827285D2F4B0 /* Pods-GeoNetTests-resources.sh */,
-				81FBAFA2B3209F93D57A5D6FDF198F26 /* Pods-GeoNetTests-umbrella.h */,
-				5AE6640B38ADE94397267528B018C2C7 /* Pods-GeoNetTests.debug.xcconfig */,
-				02B32C0C6C961D5EA5D97B735C6CB3F2 /* Pods-GeoNetTests.release.xcconfig */,
+				647C6D773935B582FA0B51796B673C05 /* Info.plist */,
+				874A9480E07FC06DC3B3A182FC39BAF2 /* Pods-GeoNet.modulemap */,
+				05EB8DDBCB2B2F9707EC57FD45776802 /* Pods-GeoNet-acknowledgements.markdown */,
+				5D4EE7299DE0FAE3FD77F86E3BBF980D /* Pods-GeoNet-acknowledgements.plist */,
+				0F8351B2FF7237987004D42984A4B5A9 /* Pods-GeoNet-dummy.m */,
+				4EAD297C1D1D47AA88EF4CBBD02244A0 /* Pods-GeoNet-frameworks.sh */,
+				1D1B3F723342AD902DB49EF4D48C62E5 /* Pods-GeoNet-resources.sh */,
+				70C267843468FE3913B6702E267378D5 /* Pods-GeoNet-umbrella.h */,
+				10B191B17DC05F963A6C684AD1417B4A /* Pods-GeoNet.debug.xcconfig */,
+				1E730941BDD29E2C6E1944A2624BB509 /* Pods-GeoNet.release.xcconfig */,
 			);
-			name = "Pods-GeoNetTests";
-			path = "Target Support Files/Pods-GeoNetTests";
+			name = "Pods-GeoNet";
+			path = "Target Support Files/Pods-GeoNet";
 			sourceTree = "<group>";
 		};
 		405D7F39B2E31E95E8E717DA18854578 /* MWFeedParser */ = {
@@ -406,23 +458,14 @@
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
-		7972A8F0470683EC5B0909025B610179 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C4843C22F05B3C48B8D0766DC08FF703 /* Pods-GeoNet */,
-				32A159819142B8A34F735A224B0D692B /* Pods-GeoNetTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				CC5FA8D3C47856E8BA7D9238EA92A78F /* Pods */,
-				C906B5B3ED6C5C814974C77DE6A590E7 /* Products */,
-				7972A8F0470683EC5B0909025B610179 /* Targets Support Files */,
+				9F076AC16CB3296B45BC4E6EFCF3D9FA /* Products */,
+				FE928F26CA84D9481FDBA051C11F0591 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -465,6 +508,38 @@
 			name = FeedParser;
 			sourceTree = "<group>";
 		};
+		9EFA88B6BFA9424E6C593AFF30A98AED /* Pods-GeoNetTests */ = {
+			isa = PBXGroup;
+			children = (
+				49E184C8083F4E44AD5FBF3B01F02304 /* Info.plist */,
+				96B2E79BA368E973F0E08676A015187B /* Pods-GeoNetTests.modulemap */,
+				27FB51D6BA978DBDE5646CBC946EEAB8 /* Pods-GeoNetTests-acknowledgements.markdown */,
+				830481EFB5F1D86741FFA6EB60CD17F5 /* Pods-GeoNetTests-acknowledgements.plist */,
+				446D3269056760B56E9E9745F47DEBF6 /* Pods-GeoNetTests-dummy.m */,
+				08B13FEBF0BEB8B2A105922C6711143A /* Pods-GeoNetTests-frameworks.sh */,
+				EEDB5D134C849B3C1CA04B91C1D407EE /* Pods-GeoNetTests-resources.sh */,
+				690EE03AD89E4B9C4648CE889F6EA24E /* Pods-GeoNetTests-umbrella.h */,
+				2286F5312132BB8C30EEA5C53FCDE2CE /* Pods-GeoNetTests.debug.xcconfig */,
+				1061CAE3791391D57C075DA7DF089358 /* Pods-GeoNetTests.release.xcconfig */,
+			);
+			name = "Pods-GeoNetTests";
+			path = "Target Support Files/Pods-GeoNetTests";
+			sourceTree = "<group>";
+		};
+		9F076AC16CB3296B45BC4E6EFCF3D9FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2D2AC15677AB47AE88DD187FE552C5B /* FormatterKit.framework */,
+				4F2749C66FAC737101AAC4AE3DAD7B67 /* MWFeedParser.framework */,
+				370FDD98FA9ACCC5FAC728520925FB7A /* Pods_GeoNet.framework */,
+				41EA26BA59A53FF3C299CC4A7709A2A5 /* Pods_GeoNetAPI.framework */,
+				62E7FBCF4BB2499FCE84E1D2E9DB8A06 /* Pods_GeoNetTests.framework */,
+				B2C1C0AD37362EB40E10834F6C5716CD /* Result.framework */,
+				FFCE417EE24DD4E90D501B78010742B7 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		ACED2D7C1128444C41D49BCD54EF3095 /* Result */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,37 +557,6 @@
 				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C4843C22F05B3C48B8D0766DC08FF703 /* Pods-GeoNet */ = {
-			isa = PBXGroup;
-			children = (
-				28C46289C20E2D4D8228C19F19FD2163 /* Info.plist */,
-				6778A8786D3C91E2191A43CF89825E6D /* Pods-GeoNet.modulemap */,
-				2061F95B225C161195A7E925E9D6C6AD /* Pods-GeoNet-acknowledgements.markdown */,
-				7050DFBD35F9B5FDBCF2AEF7C354AB5D /* Pods-GeoNet-acknowledgements.plist */,
-				99C872D2839D2808A99A55091A785C3A /* Pods-GeoNet-dummy.m */,
-				E14D8F350AD943707CC047F661235666 /* Pods-GeoNet-frameworks.sh */,
-				D3906D369BC7998E0B66F5DA72203B36 /* Pods-GeoNet-resources.sh */,
-				E5D21035EFEBDF09F823FC38F4C8C510 /* Pods-GeoNet-umbrella.h */,
-				FB88878D4CA71C37F7BE153971F05A23 /* Pods-GeoNet.debug.xcconfig */,
-				857DA76CD57B523A8123FCDDA03FAA21 /* Pods-GeoNet.release.xcconfig */,
-			);
-			name = "Pods-GeoNet";
-			path = "Target Support Files/Pods-GeoNet";
-			sourceTree = "<group>";
-		};
-		C906B5B3ED6C5C814974C77DE6A590E7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				10748A17F31603B247990F686C06B48A /* FormatterKit.framework */,
-				39666F1434370820513D6EA6F48B4FBE /* MWFeedParser.framework */,
-				CF40B8DF2111D080361D7E11B3C6F3E9 /* Pods_GeoNet.framework */,
-				AB633A78AEDBDCA03CCBB0ACE54C7804 /* Pods_GeoNetTests.framework */,
-				36530C900175BDA011651AC96FDEF4DC /* Result.framework */,
-				07961FBC9A902C617041FA29B46D2E98 /* SwiftyJSON.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		CC5FA8D3C47856E8BA7D9238EA92A78F /* Pods */ = {
@@ -546,6 +590,16 @@
 				4193B370300EE401437B15EEA8D35783 /* Resources */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		FE928F26CA84D9481FDBA051C11F0591 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B60B9EF1430CCDF6413B571ABFD173C /* Pods-GeoNet */,
+				1DE1376858A680DB486B2B65FA78C439 /* Pods-GeoNetAPI */,
+				9EFA88B6BFA9424E6C593AFF30A98AED /* Pods-GeoNetTests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -590,6 +644,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6DC321421B04854C90691E2CB9B9525F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB0460C124C7B8BB5EBA423125BC459D /* Pods-GeoNetAPI-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AC665263026DD8FB093E8F31E591AECC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -610,6 +672,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		06B48E70C60DE32EA23257B0B6556F56 /* Pods-GeoNetAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A567C108C278869CAE072F26918135AD /* Build configuration list for PBXNativeTarget "Pods-GeoNetAPI" */;
+			buildPhases = (
+				CFC72B7A32F2B1DB3DFF605EF8708C0B /* Sources */,
+				B556F6ECDCE1B735EA8358ABB6324BA0 /* Frameworks */,
+				6DC321421B04854C90691E2CB9B9525F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08B6959B1EE27554E430C4340A94310A /* PBXTargetDependency */,
+				4E7BF2EDC1F3B82EF76BB19D9C259B4B /* PBXTargetDependency */,
+			);
+			name = "Pods-GeoNetAPI";
+			productName = "Pods-GeoNetAPI";
+			productReference = 41EA26BA59A53FF3C299CC4A7709A2A5 /* Pods_GeoNetAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		1EFD0EA3A2166E3C59599FDCBA28A9C7 /* Result */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6712D56384CB768F357E6767D207A994 /* Build configuration list for PBXNativeTarget "Result" */;
@@ -624,7 +705,7 @@
 			);
 			name = Result;
 			productName = Result;
-			productReference = 36530C900175BDA011651AC96FDEF4DC /* Result.framework */;
+			productReference = B2C1C0AD37362EB40E10834F6C5716CD /* Result.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3325457CCD7DA8D41DC4F7D5921C43CB /* Pods-GeoNetTests */ = {
@@ -641,7 +722,7 @@
 			);
 			name = "Pods-GeoNetTests";
 			productName = "Pods-GeoNetTests";
-			productReference = AB633A78AEDBDCA03CCBB0ACE54C7804 /* Pods_GeoNetTests.framework */;
+			productReference = 62E7FBCF4BB2499FCE84E1D2E9DB8A06 /* Pods_GeoNetTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		70903091AD9993134E01311C19156FBA /* FormatterKit */ = {
@@ -659,7 +740,7 @@
 			);
 			name = FormatterKit;
 			productName = FormatterKit;
-			productReference = 10748A17F31603B247990F686C06B48A /* FormatterKit.framework */;
+			productReference = D2D2AC15677AB47AE88DD187FE552C5B /* FormatterKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		912D1F09221172E8435C5F0BC7E41CC9 /* SwiftyJSON */ = {
@@ -676,7 +757,7 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = 07961FBC9A902C617041FA29B46D2E98 /* SwiftyJSON.framework */;
+			productReference = FFCE417EE24DD4E90D501B78010742B7 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D5CB313585725CB922E4174913D0317B /* Pods-GeoNet */ = {
@@ -697,7 +778,7 @@
 			);
 			name = "Pods-GeoNet";
 			productName = "Pods-GeoNet";
-			productReference = CF40B8DF2111D080361D7E11B3C6F3E9 /* Pods_GeoNet.framework */;
+			productReference = 370FDD98FA9ACCC5FAC728520925FB7A /* Pods_GeoNet.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F3C31446D910883EA29C7FC5567BC360 /* MWFeedParser */ = {
@@ -714,7 +795,7 @@
 			);
 			name = MWFeedParser;
 			productName = MWFeedParser;
-			productReference = 39666F1434370820513D6EA6F48B4FBE /* MWFeedParser.framework */;
+			productReference = 4F2749C66FAC737101AAC4AE3DAD7B67 /* MWFeedParser.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -734,13 +815,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C906B5B3ED6C5C814974C77DE6A590E7 /* Products */;
+			productRefGroup = 9F076AC16CB3296B45BC4E6EFCF3D9FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				70903091AD9993134E01311C19156FBA /* FormatterKit */,
 				F3C31446D910883EA29C7FC5567BC360 /* MWFeedParser */,
 				D5CB313585725CB922E4174913D0317B /* Pods-GeoNet */,
+				06B48E70C60DE32EA23257B0B6556F56 /* Pods-GeoNetAPI */,
 				3325457CCD7DA8D41DC4F7D5921C43CB /* Pods-GeoNetTests */,
 				1EFD0EA3A2166E3C59599FDCBA28A9C7 /* Result */,
 				912D1F09221172E8435C5F0BC7E41CC9 /* SwiftyJSON */,
@@ -830,6 +912,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFC72B7A32F2B1DB3DFF605EF8708C0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D1FC8E1C8DF2A4248305CDFB5DC1566 /* Pods-GeoNetAPI-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EAD1AD2A7EE982ED09AFD51C6DD54725 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -857,11 +947,23 @@
 			target = 1EFD0EA3A2166E3C59599FDCBA28A9C7 /* Result */;
 			targetProxy = 2D73817E4AE99114E710002407E6F92F /* PBXContainerItemProxy */;
 		};
+		08B6959B1EE27554E430C4340A94310A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Result;
+			target = 1EFD0EA3A2166E3C59599FDCBA28A9C7 /* Result */;
+			targetProxy = 8131AB2E351850A0E987302A07945C53 /* PBXContainerItemProxy */;
+		};
 		2FA61A6812ACBFBB4BF3628A2ADE9140 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MWFeedParser;
 			target = F3C31446D910883EA29C7FC5567BC360 /* MWFeedParser */;
 			targetProxy = 1F4A1AE985FB8C0F1BDAED4A880696E8 /* PBXContainerItemProxy */;
+		};
+		4E7BF2EDC1F3B82EF76BB19D9C259B4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 912D1F09221172E8435C5F0BC7E41CC9 /* SwiftyJSON */;
+			targetProxy = 0908F6B93E51D3EF64D2814134B3081E /* PBXContainerItemProxy */;
 		};
 		9E71221DE87DC19C353C93A5D0594D8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -912,7 +1014,7 @@
 		};
 		30113BDE68DCD9D9783E5B67C6139FE8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 857DA76CD57B523A8123FCDDA03FAA21 /* Pods-GeoNet.release.xcconfig */;
+			baseConfigurationReference = 1E730941BDD29E2C6E1944A2624BB509 /* Pods-GeoNet.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -937,6 +1039,41 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_GeoNet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3E48A67F2895D80ADC3F1D83E180D6CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EA5050F53E55719A4469CB8C684119E /* Pods-GeoNetAPI.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GeoNetAPI/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GeoNetAPI/Pods-GeoNetAPI.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GeoNetAPI;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1056,7 +1193,7 @@
 		};
 		7572F7A2068AE1043F0945F718187B73 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB88878D4CA71C37F7BE153971F05A23 /* Pods-GeoNet.debug.xcconfig */;
+			baseConfigurationReference = 10B191B17DC05F963A6C684AD1417B4A /* Pods-GeoNet.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1092,7 +1229,7 @@
 		};
 		75E9439A8DD3F6732683A445D9393139 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AE6640B38ADE94397267528B018C2C7 /* Pods-GeoNetTests.debug.xcconfig */;
+			baseConfigurationReference = 2286F5312132BB8C30EEA5C53FCDE2CE /* Pods-GeoNetTests.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1127,7 +1264,7 @@
 		};
 		9054EF966107971E71847C34D8D9AA80 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02B32C0C6C961D5EA5D97B735C6CB3F2 /* Pods-GeoNetTests.release.xcconfig */;
+			baseConfigurationReference = 1061CAE3791391D57C075DA7DF089358 /* Pods-GeoNetTests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1297,6 +1434,42 @@
 			};
 			name = Release;
 		};
+		E1F2B17140BA27BD3F4FA7BE4C680DD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B097C2610A15A9FBCBCBBBD0E066C00A /* Pods-GeoNetAPI.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GeoNetAPI/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GeoNetAPI/Pods-GeoNetAPI.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GeoNetAPI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		F4C5AFBC3BF5488E094C86E9AD084971 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 479CC431700C2F027192E57970AFECFA /* Result.xcconfig */;
@@ -1414,6 +1587,15 @@
 			buildConfigurations = (
 				4E4D8DEDD748DA1687CC0D41962CEFD1 /* Debug */,
 				5ABB259437BE64679BBCAD42A3D078A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A567C108C278869CAE072F26918135AD /* Build configuration list for PBXNativeTarget "Pods-GeoNetAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1F2B17140BA27BD3F4FA7BE4C680DD6 /* Debug */,
+				3E48A67F2895D80ADC3F1D83E180D6CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -11,7 +11,7 @@ import CoreLocation
 import SwiftyJSON
 
 /// http://info.geonet.org.nz/display/quake/Shaking+Intensity
-enum QuakeIntensity: Int {
+public enum QuakeIntensity: Int {
 
     case unnoticeable
     case weak
@@ -21,7 +21,7 @@ enum QuakeIntensity: Int {
     case severe
     case extreme
 
-    var MMIRange: Range<Int> {
+    public var MMIRange: Range<Int> {
         switch self {
         case .unnoticeable: return (-1..<QuakeMMI.weak.rawValue)
         case .weak: return (QuakeMMI.weak.rawValue..<QuakeMMI.light.rawValue)
@@ -37,7 +37,7 @@ enum QuakeIntensity: Int {
 
 extension QuakeIntensity: CustomStringConvertible {
 
-    var description: String {
+    public var description: String {
         switch self {
         case .unnoticeable: return "Unnoticeable"
         case .weak: return "Weak"
@@ -51,7 +51,7 @@ extension QuakeIntensity: CustomStringConvertible {
 
 }
 
-enum QuakeMMI: Int {
+public enum QuakeMMI: Int {
 
     case imperceptible = 1
     case scarcelyFelt
@@ -66,35 +66,35 @@ enum QuakeMMI: Int {
     case devastating
     case completelyDevastating
 
-    var intensity: QuakeIntensity {
+    public var intensity: QuakeIntensity {
         let intensities: [QuakeIntensity] = [.unnoticeable, .weak, .light, .moderate, .strong, .severe, .extreme]
         return intensities.first { $0.MMIRange.contains(self.rawValue) } ?? .unnoticeable
     }
 
 }
 
-struct Quake {
+public struct Quake {
 
     /// the unique public identifier for this quake.
-    var identifier: String
+    public var identifier: String
 
     /// the origin time of the quake.
-    var time: Date
+    public var time: Date
 
     /// the depth of the quake in km.
-    var depth: Double
+    public var depth: Double
 
     /// the summary magnitude for the quake.
-    var magnitude: Double
+    public var magnitude: Double
 
     /// the calculated MMI shaking at the closest locality in the New Zealand region.
-    var locality: String
+    public var locality: String
 
-    var mmi: QuakeMMI
+    public var mmi: QuakeMMI
 
-    var epicenter: CLLocationCoordinate2D
+    public var epicenter: CLLocationCoordinate2D
 
-    init?(feature: JSON) {
+    public init?(feature: JSON) {
         let geometry = feature["geometry"]
         let properties = feature["properties"]
         guard geometry["type"] == "Point",
@@ -127,7 +127,7 @@ struct Quake {
 
 }
 
-enum VolcanoAlertLevel: Int {
+public enum VolcanoAlertLevel: Int {
 
     case noUnrest
 
@@ -138,39 +138,28 @@ enum VolcanoAlertLevel: Int {
     case moderateEruption
     case majorEruption
 
-    var color: UIColor {
-        switch self {
-        case .noUnrest: return UIColor(hexRGB: 0xe7deec)
-        case .minorUnrest: return UIColor(hexRGB: 0xdcc9e0)
-        case .moderateUnrest: return UIColor(hexRGB: 0xd1b5d3)
-        case .minorEruption: return UIColor(hexRGB: 0xa867a2)
-        case .moderateEruption: return UIColor(hexRGB: 0x954990)
-        case .majorEruption: return UIColor(hexRGB: 0x832c82)
-        }
-    }
-
 }
 
-struct Volcano {
+public struct Volcano {
 
     /// a unique identifier for the volcano.
-    var identifier: String
+    public var identifier: String
 
     /// the volcano title.
-    var title: String
+    public var title: String
 
     /// volcanic alert level.
-    var level: VolcanoAlertLevel
+    public var level: VolcanoAlertLevel
 
     /// volcanic activity.
-    var activity: String
+    public var activity: String
 
     /// most likely hazards.
-    var hazards: String
+    public var hazards: String
 
-    var coordinates: CLLocationCoordinate2D
+    public var coordinates: CLLocationCoordinate2D
 
-    init?(feature: JSON) {
+    public init?(feature: JSON) {
         let geometry = feature["geometry"]
         let properties = feature["properties"]
         guard geometry["type"] == "Point",
@@ -202,7 +191,7 @@ extension Volcano: Comparable {
     }
 
 
-    static func <(lhs: Volcano, rhs: Volcano) -> Bool {
+    public static func <(lhs: Volcano, rhs: Volcano) -> Bool {
         if lhs.level.rawValue > rhs.level.rawValue {
             return true
         }
