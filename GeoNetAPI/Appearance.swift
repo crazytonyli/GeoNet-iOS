@@ -7,12 +7,11 @@
 //
 
 import UIKit
-import GeoNetAPI
 
 extension QuakeIntensity {
 
     /// http://info.geonet.org.nz/display/quake/Shaking+Intensity
-    var color: UIColor {
+    public var color: UIColor {
         let rgb: UInt
         switch self {
         case .unnoticeable: rgb = 0xf5f5f5

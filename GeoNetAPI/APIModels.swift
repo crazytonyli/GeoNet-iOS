@@ -127,6 +127,18 @@ public struct Quake {
 
 }
 
+extension Quake: Equatable, Hashable {
+
+    public static func ==(lhs: Quake, rhs: Quake) -> Bool {
+        return lhs.identifier == rhs.identifier
+    }
+
+    public var hashValue: Int {
+        return identifier.hashValue
+    }
+
+}
+
 public enum VolcanoAlertLevel: Int {
 
     case noUnrest

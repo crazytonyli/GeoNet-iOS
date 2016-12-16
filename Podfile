@@ -14,6 +14,10 @@ target 'GeoNet' do
 
 end
 
+target 'Recent Quakes' do
+  pod 'FormatterKit/TimeIntervalFormatter', '~> 1.8'
+end
+
 target 'GeoNetAPI' do
   pod 'Result', '~> 3.0'
   pod 'SwiftyJSON', '~> 3.1'

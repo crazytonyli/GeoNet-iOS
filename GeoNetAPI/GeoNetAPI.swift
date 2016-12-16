@@ -27,6 +27,21 @@ public enum GeoNetAPIError: Swift.Error {
 
 }
 
+private var _APISession: URLSession?
+
+extension URLSession {
+
+    public static var API: URLSession {
+        if _APISession == nil {
+            _APISession = URLSession(configuration: .default, delegate: nil, delegateQueue: .main)
+            _APISession?.configuration.httpAdditionalHeaders
+                = ["Accept": "application/vnd.geo+json;version=2"]
+        }
+        return _APISession!
+    }
+    
+}
+
 extension URLSession {
 
     func GeoJSON(url: URL, completion: @escaping (Result<JSON, GeoNetAPIError>) -> Void) -> URLSessionTask {

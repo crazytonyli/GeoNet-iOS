@@ -7,18 +7,3 @@
 //
 
 import Foundation
-
-private var _APISession: URLSession?
-
-extension URLSession {
-
-    static var API: URLSession {
-        if _APISession == nil {
-            _APISession = URLSession(configuration: .default, delegate: nil, delegateQueue: .main)
-            _APISession?.configuration.httpAdditionalHeaders
-                = ["Accept": "application/vnd.geo+json;version=2"]
-        }
-        return _APISession!
-    }
-
-}
