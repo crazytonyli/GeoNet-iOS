@@ -10,6 +10,7 @@
 		16DB15006D48BC506B9AEE8D /* Pods_GeoNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E170CF2A7645D3D156A42C6E /* Pods_GeoNet.framework */; };
 		4AB2D0D51E03C4BA00D5E464 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB2D0D41E03C4BA00D5E464 /* UIColorExtension.swift */; };
 		4AB2D0D71E03C4D400D5E464 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB2D0D61E03C4D400D5E464 /* Appearance.swift */; };
+		4AB2D0DB1E03CAB600D5E464 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB2D0DA1E03CAB600D5E464 /* UserDefaults.swift */; };
 		4AB6A4071DF39C6500E1073C /* QuakeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB6A4061DF39C6500E1073C /* QuakeMapViewController.swift */; };
 		4AC262861DFB6A790095D279 /* GeoNetAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC262841DFB6A790095D279 /* GeoNetAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AC262891DFB6A790095D279 /* GeoNetAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC262821DFB6A790095D279 /* GeoNetAPI.framework */; };
@@ -37,7 +38,6 @@
 		B912DE461DDEC84A004B5A71 /* VolcanoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912DE451DDEC84A004B5A71 /* VolcanoesViewController.swift */; };
 		B96909A81DDF05AE00896042 /* QuakeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909A71DDF05AE00896042 /* QuakeInfoTableViewCell.swift */; };
 		B96909AF1DE0FDE900896042 /* IntensitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909AE1DE0FDE900896042 /* IntensitiesViewController.swift */; };
-		B96909B11DE2BD8B00896042 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909B01DE2BD8B00896042 /* UserDefaults.swift */; };
 		B96909B51DE3CE2B00896042 /* QuakeLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96909B41DE3CE2B00896042 /* QuakeLocationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +100,9 @@
 		4A78E3117C27F4795FEA6113 /* Pods-GeoNetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoNetTests/Pods-GeoNetTests.release.xcconfig"; sourceTree = "<group>"; };
 		4AB2D0D41E03C4BA00D5E464 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		4AB2D0D61E03C4D400D5E464 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		4AB2D0D81E03CA2D00D5E464 /* GeoNet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeoNet.entitlements; sourceTree = "<group>"; };
+		4AB2D0D91E03CA6F00D5E464 /* Recent Quakes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recent Quakes.entitlements"; sourceTree = "<group>"; };
+		4AB2D0DA1E03CAB600D5E464 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		4AB6A4061DF39C6500E1073C /* QuakeMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeMapViewController.swift; sourceTree = "<group>"; };
 		4AC262821DFB6A790095D279 /* GeoNetAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeoNetAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC262841DFB6A790095D279 /* GeoNetAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoNetAPI.h; sourceTree = "<group>"; };
@@ -132,7 +135,6 @@
 		B912DE451DDEC84A004B5A71 /* VolcanoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolcanoesViewController.swift; sourceTree = "<group>"; };
 		B96909A71DDF05AE00896042 /* QuakeInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeInfoTableViewCell.swift; sourceTree = "<group>"; };
 		B96909AE1DE0FDE900896042 /* IntensitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntensitiesViewController.swift; sourceTree = "<group>"; };
-		B96909B01DE2BD8B00896042 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		B96909B41DE3CE2B00896042 /* QuakeLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeLocationView.swift; sourceTree = "<group>"; };
 		E170CF2A7645D3D156A42C6E /* Pods_GeoNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -184,6 +186,7 @@
 				4AC262901DFB6B010095D279 /* GeoNetAPI.swift */,
 				4AB2D0D41E03C4BA00D5E464 /* UIColorExtension.swift */,
 				4AB2D0D61E03C4D400D5E464 /* Appearance.swift */,
+				4AB2D0DA1E03CAB600D5E464 /* UserDefaults.swift */,
 				4AC262851DFB6A790095D279 /* Info.plist */,
 			);
 			path = GeoNetAPI;
@@ -192,6 +195,7 @@
 		4AC262A01DFBC8340095D279 /* Recent Quakes */ = {
 			isa = PBXGroup;
 			children = (
+				4AB2D0D91E03CA6F00D5E464 /* Recent Quakes.entitlements */,
 				4AC262A11DFBC8340095D279 /* TodayViewController.swift */,
 				4AC262A61DFBC8340095D279 /* Info.plist */,
 			);
@@ -237,6 +241,7 @@
 		B912DE0A1DDEC461004B5A71 /* GeoNet */ = {
 			isa = PBXGroup;
 			children = (
+				4AB2D0D81E03CA2D00D5E464 /* GeoNet.entitlements */,
 				B912DE141DDEC461004B5A71 /* Assets.xcassets */,
 				B912DE2D1DDEC49A004B5A71 /* App */,
 				B96909A91DDF0B1E00896042 /* Extensions */,
@@ -263,7 +268,6 @@
 			children = (
 				B912DE2E1DDEC49A004B5A71 /* AppDelegate.swift */,
 				B912DE3F1DDEC7C7004B5A71 /* GeoNetViewControllers.swift */,
-				B96909B01DE2BD8B00896042 /* UserDefaults.swift */,
 				B912DE301DDEC4EC004B5A71 /* Info.plist */,
 				B912DE161DDEC461004B5A71 /* LaunchScreen.storyboard */,
 			);
@@ -456,11 +460,21 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 5W5KKWP2K5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B912DE071DDEC461004B5A71 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 5W5KKWP2K5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B912DE1D1DDEC461004B5A71 = {
 						CreatedOnToolsVersion = 8.1;
@@ -683,6 +697,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC262921DFB6B010095D279 /* GeoNetAPI.swift in Sources */,
+				4AB2D0DB1E03CAB600D5E464 /* UserDefaults.swift in Sources */,
 				4AC262911DFB6B010095D279 /* APIModels.swift in Sources */,
 				4AB2D0D51E03C4BA00D5E464 /* UIColorExtension.swift in Sources */,
 				4AB2D0D71E03C4D400D5E464 /* Appearance.swift in Sources */,
@@ -714,7 +729,6 @@
 				B912DE421DDEC81E004B5A71 /* NewsViewController.swift in Sources */,
 				B96909AF1DE0FDE900896042 /* IntensitiesViewController.swift in Sources */,
 				B912DE2F1DDEC49A004B5A71 /* AppDelegate.swift in Sources */,
-				B96909B11DE2BD8B00896042 /* UserDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +828,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 03ADE921CE8CE6CA5F19B499 /* Pods-Recent Quakes.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Recent Quakes/Recent Quakes.entitlements";
 				DEVELOPMENT_TEAM = 5W5KKWP2K5;
 				INFOPLIST_FILE = "Recent Quakes/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -829,6 +844,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 30F35A2A24DD42265AD65DF2 /* Pods-Recent Quakes.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Recent Quakes/Recent Quakes.entitlements";
 				DEVELOPMENT_TEAM = 5W5KKWP2K5;
 				INFOPLIST_FILE = "Recent Quakes/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -941,6 +957,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GeoNet/GeoNet.entitlements;
 				DEVELOPMENT_TEAM = 5W5KKWP2K5;
 				INFOPLIST_FILE = GeoNet/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -957,6 +974,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GeoNet/GeoNet.entitlements;
 				DEVELOPMENT_TEAM = 5W5KKWP2K5;
 				INFOPLIST_FILE = GeoNet/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

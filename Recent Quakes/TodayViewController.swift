@@ -28,7 +28,12 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     }
 
     func refresh(completionHandler: ((NCUpdateResult) -> Void)?) {
-        URLSession.API.quakes(with: .moderate) { [weak self] in
+        let intensity = UserDefaults.app.selectedIntensity ?? .weak
+        guard let mmi = QuakeMMI(rawValue: intensity.MMIRange.lowerBound) else {
+            return
+        }
+
+        URLSession.API.quakes(with: mmi) { [weak self] in
             guard let `self` = self else { return }
             switch $0 {
             case .failure:

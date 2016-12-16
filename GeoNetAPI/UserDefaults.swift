@@ -7,12 +7,11 @@
 //
 
 import Foundation
-import GeoNetAPI
 
 extension UserDefaults {
 
-    class var app: UserDefaults {
-        let instance = UserDefaults.standard
+    public class var app: UserDefaults {
+        let instance = UserDefaults(suiteName: "group.li.crazytony.GeoNet") ?? .standard
         instance.register(defaults: [Key.selectedIntensity.rawValue: QuakeIntensity.weak.rawValue])
         return instance
     }
@@ -38,7 +37,7 @@ extension UserDefaults {
         case selectedIntensity = "SelectedIntensity"
     }
 
-    var selectedIntensity: QuakeIntensity? {
+    public var selectedIntensity: QuakeIntensity? {
         get { return value(for: .selectedIntensity) }
         set { set(newValue, for: .selectedIntensity) }
     }
