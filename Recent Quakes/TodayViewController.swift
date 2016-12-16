@@ -39,9 +39,10 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
             case .failure:
                 completionHandler?(.failed)
             case .success(let quakes):
-                let newData = self.quakes != quakes
-                self.quakes = quakes.count > 2 ? Array(quakes[0...1]) : quakes
-                completionHandler?(newData ? .newData : .noData)
+                let newQuakes = quakes.count > 2 ? Array(quakes[0...1]) : quakes
+                let result: NCUpdateResult = self.quakes == newQuakes ? .noData : .newData
+                self.quakes = newQuakes
+                completionHandler?(result)
             }
         }
     }
