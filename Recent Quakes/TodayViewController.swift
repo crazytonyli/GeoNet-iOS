@@ -46,11 +46,11 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
             }
         }
     }
-    
+
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         refresh(completionHandler: completionHandler)
     }
-    
+
 }
 
 extension TodayViewController {

@@ -61,7 +61,7 @@ class QuakeInfoTableViewCell: UITableViewCell {
             infoView.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor),
             ])
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -83,7 +83,7 @@ class QuakeInfoTableViewCell: UITableViewCell {
         mapView.epicenter = quake.epicenter
         infoView.update(with: quake)
     }
-    
+
 }
 
 class QuakeInfoView: UIView {
@@ -114,7 +114,7 @@ class QuakeInfoView: UIView {
         attributesView.translatesAutoresizingMaskIntoConstraints = false
         timeLabel.translatesAutoresizingMaskIntoConstraints = false
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

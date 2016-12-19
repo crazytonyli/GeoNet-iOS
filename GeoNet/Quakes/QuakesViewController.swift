@@ -29,7 +29,7 @@ class QuakesViewController: UITableViewController {
         super.init(style: .plain)
         title = "Quakes"
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -44,7 +44,7 @@ class QuakesViewController: UITableViewController {
 
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
-        tableView.separatorInset = UIEdgeInsetsMake(0, QuakeInfoTableViewCell.intensityIndicatorWidth, 0, 0)
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: QuakeInfoTableViewCell.intensityIndicatorWidth, bottom: 0, right:0)
         tableView.register(QuakeInfoTableViewCell.self, forCellReuseIdentifier: "cell")
 
         loadQuakes()
@@ -74,6 +74,7 @@ extension QuakesViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // swiftlint:disable force_cast
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! QuakeInfoTableViewCell
         cell.update(with: quakes[indexPath.row])
         return cell

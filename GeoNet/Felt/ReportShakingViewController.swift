@@ -14,9 +14,9 @@ class ReportShakingViewController: GeoNetViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         title = "Report Shaking"
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
 }

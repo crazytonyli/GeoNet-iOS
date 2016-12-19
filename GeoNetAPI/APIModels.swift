@@ -129,7 +129,7 @@ public struct Quake {
 
 extension Quake: Equatable, Hashable {
 
-    public static func ==(lhs: Quake, rhs: Quake) -> Bool {
+    public static func == (lhs: Quake, rhs: Quake) -> Bool {
         return lhs.identifier == rhs.identifier
     }
 
@@ -197,13 +197,12 @@ public struct Volcano {
 }
 
 extension Volcano: Comparable {
-    
-    public static func ==(lhs: Volcano, rhs: Volcano) -> Bool {
+
+    public static func == (lhs: Volcano, rhs: Volcano) -> Bool {
         return lhs.level == rhs.level && lhs.title == rhs.title
     }
 
-
-    public static func <(lhs: Volcano, rhs: Volcano) -> Bool {
+    public static func < (lhs: Volcano, rhs: Volcano) -> Bool {
         if lhs.level.rawValue > rhs.level.rawValue {
             return true
         }

@@ -24,5 +24,5 @@ extension QuakeIntensity {
         }
         return UIColor(hexRGB: rgb)
     }
-    
+
 }

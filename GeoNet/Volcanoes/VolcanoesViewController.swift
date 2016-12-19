@@ -28,7 +28,7 @@ private class VolcanoCell: UITableViewCell {
         textLabel?.backgroundColor = .clear
         detailTextLabel?.backgroundColor = .clear
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -61,7 +61,7 @@ class VolcanoesViewController: UITableViewController {
         super.init(style: .grouped)
         title = "Volcanoes"
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -98,6 +98,7 @@ class VolcanoesViewController: UITableViewController {
             return cell
         }
 
+        // swiftlint:disable force_cast
         let cell = tableView.dequeueReusableCell(withIdentifier: "volcano", for: indexPath) as! VolcanoCell
         cell.update(with: volcanoes[indexPath.row])
         return cell

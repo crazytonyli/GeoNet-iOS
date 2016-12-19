@@ -20,7 +20,7 @@ class QuakeMapViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         title = "Quake Detail"
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -61,7 +61,7 @@ class QuakeMapViewController: UIViewController {
         mapView?.addAnnotation(epicenter)
         mapView?.selectAnnotation(epicenter, animated: false)
     }
-    
+
 }
 
 extension QuakeMapViewController: MKMapViewDelegate {

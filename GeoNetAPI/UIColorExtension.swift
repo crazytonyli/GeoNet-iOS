@@ -26,5 +26,5 @@ public extension UIColor {
         var alpha: CGFloat = 0
         return getRed(&red, green: &green, blue: &blue, alpha: &alpha) ? (red, green, blue, alpha) : nil
     }
-    
+
 }

@@ -41,7 +41,7 @@ class QuakeLocationView: UIView {
         epicenterLayer.actions = ["position": NSNull()]
         layer.addSublayer(epicenterLayer)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

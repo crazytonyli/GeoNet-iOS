@@ -31,7 +31,7 @@ private class FeedCell: UITableViewCell {
         detailTextLabel?.textColor = .lightGray
         accessoryType = .disclosureIndicator
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -89,6 +89,7 @@ class NewsViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // swiftlint:disable force_cast
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedCell
         cell.update(with: feedItems[indexPath.row])
         return cell

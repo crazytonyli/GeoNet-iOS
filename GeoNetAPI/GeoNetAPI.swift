@@ -39,7 +39,7 @@ extension URLSession {
         }
         return _APISession!
     }
-    
+
 }
 
 extension URLSession {
@@ -51,6 +51,7 @@ extension URLSession {
     func GeoJSON(request: URLRequest, completion: @escaping (Result<JSON, GeoNetAPIError>) -> Void) -> URLSessionTask {
         let task = dataTask(with: request) { data, response, error in
             guard error == nil else {
+                // swiftlint:disable force_cast
                 completion(Result(error: .HTTP(error as! NSError)))
                 return
             }

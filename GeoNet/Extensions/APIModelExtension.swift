@@ -21,5 +21,5 @@ extension VolcanoAlertLevel {
         case .majorEruption: return UIColor(hexRGB: 0x832c82)
         }
     }
-    
+
 }
