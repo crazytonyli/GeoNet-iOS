@@ -43,6 +43,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var selectedNavigationController: UINavigationController {
+        // swiftlint:disable force_cast
+        return (window?.rootViewController as! UITabBarController).selectedViewController as! UINavigationController
+    }
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
         launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -60,6 +65,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         return true
+    }
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        if let quakeIdentifier = (url.host == "quake" && url.pathComponents.count == 2 ? url.pathComponents.last : nil) {
+            // TODO show & hide HUD
+            URLSession.API.quake(quakeIdentifier) {
+                if case .success(let quake) = $0 {
+                    self.selectedNavigationController.pushViewController(QuakeMapViewController(quake: quake), animated: true)
+                }
+            }
+
+            return true
+        }
+
+        return false
     }
 
 }

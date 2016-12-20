@@ -85,8 +85,11 @@ extension TodayViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO TBD
         tableView.deselectRow(at: indexPath, animated: true)
+
+        if let url = URL(string: "geonet://quake/\(quakes[indexPath.row].identifier)") {
+            extensionContext?.open(url, completionHandler: nil)
+        }
     }
 
 }

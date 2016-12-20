@@ -44,11 +44,11 @@ extension URLSession {
 
 extension URLSession {
 
-    func GeoJSON(url: URL, completion: @escaping (Result<JSON, GeoNetAPIError>) -> Void) -> URLSessionTask {
-        return GeoJSON(request: URLRequest(url: url), completion: completion)
+    func features(url: URL, completion: @escaping (Result<[JSON], GeoNetAPIError>) -> Void) -> URLSessionTask {
+        return features(request: URLRequest(url: url), completion: completion)
     }
 
-    func GeoJSON(request: URLRequest, completion: @escaping (Result<JSON, GeoNetAPIError>) -> Void) -> URLSessionTask {
+    func features(request: URLRequest, completion: @escaping (Result<[JSON], GeoNetAPIError>) -> Void) -> URLSessionTask {
         let task = dataTask(with: request) { data, response, error in
             guard error == nil else {
                 // swiftlint:disable force_cast
@@ -61,7 +61,9 @@ extension URLSession {
                 completion(Result(error: .unknown))
                 return
             }
-            completion(Result(value: JSON(data: data)))
+
+            let json = JSON(data: data)
+            completion(Result(value: json["features"].array ?? []))
         }
         task.resume()
         return task
@@ -71,15 +73,26 @@ extension URLSession {
 
 extension URLSession {
 
+    @discardableResult public func quake(_ identifier: String, completion: @escaping (Result<Quake, GeoNetAPIError>) -> Void) -> URLSessionTask {
+        return features(request: APIRequest(path: "/quake/\(identifier)")) { result in
+            completion(result.flatMap {
+                $0.first
+                    .flatMap(Quake.init(feature:))
+                    .flatMap { Result.success($0) }
+                    ?? .failure(.unknown)
+            })
+        }
+    }
+
     @discardableResult public func quakes(with mmi: QuakeMMI, completion: @escaping (Result<[Quake], GeoNetAPIError>) -> Void) -> URLSessionTask {
-        return GeoJSON(request: APIRequest(path: "/quake", query: ["MMI": mmi.rawValue])) { result in
-            completion(result.map { $0["features"].array?.flatMap { Quake(feature: $0) } ?? [] })
+        return features(request: APIRequest(path: "/quake", query: ["MMI": mmi.rawValue])) { result in
+            completion(result.map { $0.flatMap(Quake.init(feature:)) })
         }
     }
 
     @discardableResult public func volcanoes(completion: @escaping (Result<[Volcano], GeoNetAPIError>) -> Void) -> URLSessionTask {
-        return GeoJSON(request: APIRequest(path: "/volcano/val")) { result in
-            completion(result.map { $0["features"].array?.flatMap { Volcano(feature: $0) } ?? [] })
+        return features(request: APIRequest(path: "/volcano/val")) { result in
+            completion(result.map { $0.flatMap(Volcano.init(feature:)) })
         }
     }
 
