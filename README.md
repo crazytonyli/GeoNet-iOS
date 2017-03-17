@@ -2,6 +2,15 @@
 
 Replica of [GeoNet iOS app](https://itunes.apple.com/nz/app/geonet-quake/id533054360?mt=8), without scaling up on iPhone 6 and later device.
 
+## Features
+
+- [x] Notification center extension - _Additional feature_
+- [x] Quakes
+- [x] Volcanoes
+- [x] News
+- [ ] Shaking map
+- [ ] Report shaking
+
 ## Data
 
 All data used in this application are from the awesome [GeoNet](https://www.geonet.org.nz/).
